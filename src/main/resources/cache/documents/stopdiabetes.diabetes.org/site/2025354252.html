@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<base href="http://stopdiabetes.diabetes.org/site/PageServer?pagename=SD_alert_day_supporters" />
+<title>Stop Diabetes:  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="Keywords" content=" " />
+<meta name="Description" content="" />
+<meta name="Robots" content="index, follow" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../yui3/yui/yui-min.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/convio/modules.js?version=2.9"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript">
+var Y = YUI({base: '../yui3/',
+insertBefore: 'yui_marker_loader_css', // insert all YUI module css before customstyle so it can be overridden
+debug: false, 
+modules: getModules('../', 'convio', false)});
+</script><noscript>&nbsp;</noscript>
+
+
+
+
+<script type="text/javascript" src="../js/utils.js"></script><noscript>&nbsp;</noscript>
+
+<script type="text/javascript" src="../js/obs_comp_rollup.js"></script><noscript>&nbsp;</noscript>
+
+
+<link href="../css/themes/default.css" rel="stylesheet" type="text/css" />
+<link href="../css/themes/alphacube.css" rel="stylesheet" type="text/css"/>
+
+
+<link href="../css/UserGlobalStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<link rel="stylesheet" type="text/css" id="yui_marker_loader_css" />
+<link href="../css/CustomStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/CustomWysiwygStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+<meta name="CnvHeaderVersion" content="v5.0" />
+
+
+<meta charset="utf-8">
+
+<meta name="copyright" content="Copyright 2009-2012  American Diabetes Association" />
+<link rel="shortcut icon" href="../images/ada_favicon.ico" type="image/vnd.microsoft.icon" />
+<!-- Don't forget to set your site up: http://google.com/webmasters -->	
+<meta name="google-site-verification" content="" />	
+<!-- Grab Google CDN's jQuery, with a protocol relative URL -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="javascript/libs/jquery-1.7.1.min.js"><\/script>')</script><!-- fall back to local if offline -->
+    
+<!--[if IE]><script> document.createElement('aside'); document.createElement('footer'); document.createElement('header'); document.createElement('section'); document.createElement('nav'); </script><![endif]--> 
+ 
+<link type="text/css" rel="stylesheet" media="all" href="https://donations.diabetes.org/stopd2012/redesign/styles.css" />
+
+<style type="text/css">
+/* COM only */
+footer {font-size:120%;}
+</style>
+
+
+
+
+
+<script type="text/javascript">
+function gup( name ){
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1].replace("%40","@");
+}
+$(document).ready(function(){
+  $("#cons_email").val(gup('email'));
+  $("#cons_zip_code").val(gup('zip'));
+});
+</script>
+
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "1881cd6d-b14a-42e5-96d8-eaf6fdb30c2c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+ 
+
+</head>
+<body
+
+
+
+
+
+
+
+
+
+
+
+
+
+>	
+<!-- increase width conditionally for action alerts (Convio Default uses 2-row wide layout) | done 1/28/13 by RH -->
+
+
+
+<div id="wrapper" class="comwrapper">
+
+ 	<header role="banner">
+		<h1 class="logo"><a href="http://www.stopdiabetes.com/?loc=stopd-logo"><img src="https://donations.diabetes.org/stopd2012/redesign/wrapper-images/stop-diabetes-logo.gif" alt="Stop Diabetes" /></a></h1>
+		<ul id="mainnav">
+			<li id="ways-to-act"><a class="tab" href="http://www.stopdiabetes.com/5-ways-to-act/?loc=stopd-nav">Ways to Act</a></li>
+			<li id="whats-happening"><a class="tab" href="http://www.stopdiabetes.com/whats-happening/?loc=stopd-nav">What's Happening</a></li>
+			<li id="get-the-facts"><a class="tab" href="http://www.stopdiabetes.com/get-the-facts/?loc=stopd-nav">Get the Facts</a></li>
+			<li id="advocacy-center"><a class="tab" href="https://donations.diabetes.org/site/SPageServer/?pagename=SD_Advocacy_Center_Responsive&loc=stopd-nav">Action Center</a></li>
+			<li id="donate-now"><a class="tab" href="http://www.stopdiabetes.com/5-ways-to-act/donate/?loc=stopd-nav">Donate Now</a></li>
+		</ul>
+		
+		<div id="header-hero-container"></div>
+	</header>
+	
+	
+
+
+
+
+<div id="layout">
+<section role="main">
+
+
+
+<div id="content">
+
+	 	
+
+
+
+
+
+<style type="text/css">
+.Explicit {
+font-weight:bold;
+}
+
+.breadcrumb, .breadcrumb a {
+font-size:12px;
+color:#999;
+margin-left:1px;
+}
+
+#leftcol {
+float:left;
+width:233px;
+margin:0 19px 0 0;
+}
+
+#rightcol {
+float:left;
+width:690px;
+margin:0;
+padding:0;
+}
+
+#rightcol a {
+	color:#2b71ac;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#rightcol a:hover {
+	color: #ac192f;
+	font-weight:bold;
+}
+
+#rightcol p {
+margin:0 0 15px 0;
+padding:0;
+color:#666;
+}
+
+
+#rightcol p.sub {
+margin-left:15px;
+}
+
+/*
+#rightcol p.sub a {
+display:block;
+}
+*/
+
+#rightcol h1 {
+width:100%;
+height:24px;
+background:url("../images/stopd/subhdr.jpg") no-repeat;
+text-transform:uppercase;
+color:#000;
+font-size:12px;
+padding:6px 0 0 23px;
+}
+
+#dyk-body {
+padding:10px 7px;
+background-color:#f5f5f5;
+background: url("../images/stopd/didyouknow-bg.gif") bottom left no-repeat;
+color:#333;
+font-weight:bold;
+}
+
+#dyk-body img {
+margin-left:70px;
+}
+
+#promo {
+margin-top:15px;
+padding:10px 7px;
+background-color:#f5f5f5;
+}
+
+#promo h2 {
+font-size:16px;
+color:#AC172E;
+margin:0 0 4px 0;
+}
+
+#promo p {
+margin-top:2px;
+}
+
+.content {
+margin:0;
+padding:10px 0;
+}
+
+.bigBlue {
+margin:2px 0 0 0;
+line-height:100%;
+}
+
+</style>
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 8px;">
+
+<div id="leftcol" style="width:300px;">
+  <div id="promo" style="border:1px solid #dfdfdf;">
+  <h1>Get Started Now!</h1><br />
+  <h2>Calendar</h2>
+<p>Check out our <span class="sdLink"><a href="http://main.diabetes.org/site/PageServer?pagename=calendar_new&utm_source=SD_WWW&utm_medium=ContentPage&utm_content=AlertDay-2011-Calendar&utm_campaign=ALERT">calendar of events</a></span> that you can join to support the Stop Diabetes movement.</p><br />
+<h2>Share on Facebook or Twitter</h2>
+<p>Help spread the word on <span class="sdLink"><a href="http://www.facebook.com/sharer.php?u=http://bit.ly/e9Cm9n&t=Will%20you%20Join%20the%20Million%20Challenge%3F%20Learn%20your%20risk%20for%20type%202%20diabetes%20in%20just%20a%20few%20easy%20questions%20and%20support%20the%20movement%20to%20Stop%20Diabetes!">Facebook</a></span> about the Join the Million Challenge.<br /><br />
+Post a message on <span class="sdLink"><a href="http://twitter.com/home?status=Will%20you%20Join%20the%20Million%20Challenge%3F%20%20Learn%20your%20risk%20for%20type%202%20%23diabetes%20in%20just%20a%20few%20easy%20questions!%20http%3A%2F%2Fbit.ly%2FeUxcRr%20%23DiabetesAlert">Twitter</a></span> about the Stop Diabetes movement and the risks for diabetes.
+<br /><br />
+<a href="http://www.facebook.com/sharer.php?u=http://bit.ly/e9Cm9n&t=Will%20you%20Join%20the%20Million%20Challenge%3F%20Learn%20your%20risk%20for%20type%202%20diabetes%20in%20just%20a%20few%20easy%20questions%20and%20support%20the%20movement%20to%20Stop%20Diabetes!"><img src="http://main.diabetes.org/images/content/pagebuilder/64125.png" border="0" /></a>&nbsp;<a href="http://twitter.com/home?status=Will%20you%20Join%20the%20Million%20Challenge%3F%20%20Learn%20your%20risk%20for%20type%202%20%23diabetes%20in%20just%20a%20few%20easy%20questions!%20http%3A%2F%2Fbit.ly%2FeUxcRr%20%23DiabetesAlert"><img src="http://main.diabetes.org/images/content/pagebuilder/64126.png" border="0" /></a>
+</p><br />
+<h2>Download resources</h2>
+<p>Want to get your community to Join the Million Challenge? Here are some <span class="sdLink"><a href="http://www.diabetes.org/in-my-community/programs/alert-day/?utm_source=SD_WWW&utm_medium=ContentPage&utm_content=AlertDay-2011&utm_campaign=ALERT">resources and information</a></span> you can share!</p><br />
+</div></div>
+
+
+<div id="rightcol" style="width:520px;">
+
+<div style="padding-bottom:20px;float:left;clear:right;">
+<h2>American Diabetes Association Alert Day<sup>&#8480</sup> Supporters </h2>
+
+<p>The American Diabetes Association is pleased to recognize our Alert Day Corporate Supporters for participating in the "Join the Million Challenge". These companies demonstrate their commitment to the diabetes epidemic and the importance of living an overall healthy lifestyle by supporting diabetes education and awareness. Together, we are working to help communities understand the risks of this devastating disease.<br />
+<br />
+We want to say "thank you" to the following companies for their efforts in the fight against diabetes!</p>
+<p>
+&bull; AstraZeneca<br />
+&bull; BD Medical-Diabetes Care <br />
+&bull; Boar's Head Provisions Co., Inc.<br />
+&bull; Boerhinger-Ingelheim Phamaceuticals<br />
+&bull; Bristol-Myers Squibb<br />
+&bull; Dignity&reg; Memorial Network<br />
+&bull; Catherines&reg;<br />
+&bull; GlaxoSmithKline (GSK)<br />
+&bull; Gold's Gym<br />
+&bull; HearPO<br />
+&bull; Merisant Company (Equal&reg;)<br />
+&bull; Miracle-Ear&reg;<br />
+&bull; NBA/WNBA FIT<br />
+&bull; Novo Nordisk&reg;<br />
+&bull; Nutrisystem&reg;<br />
+&bull; Quest Diagnostics&reg; <br />
+&bull; Rite Aid&reg;<br />
+&bull; Roche Diabetes Care  <br />
+&bull; T-Fal&reg; Actifry&reg;<br />
+&bull; VSP&reg; Vision Care <br />
+&bull; Walmart<br />
+&bull; WellPoint&reg; Foundation <br />
+</p>
+</div>
+
+</div>
+</div>
+
+</div><!--#content-->
+</section>
+
+</div><!-- layout -->
+
+</div><!--#wrapper-->
+
+<footer id="footer" role="contentinfo">
+<div class="wrapper">
+<p id="ada-overview">
+<a id="ada-overview-logo" href="http://www.stopdiabetes.com/?loc=stopd-footer" title="Stop Diabetes&reg; Home"><img src="http://www.stopdiabetes.com/assets/images/logo-overview.png" alt="Stop Diabetes&reg; Logo" /></a> Stop Diabetes is the Association's movement to end the devastating toll that diabetes takes on the lives of millions of individuals and families across our nation. Join the Millions&reg; in the Movement. Together we can Stop Diabetes&reg;.</p>
+<nav>
+<ul>
+<li><a href="http://www.stopdiabetes.com/5-ways-to-act/?loc=stopd-footer" title="Ways to Act">Ways to Act</a>
+<ul>
+<li><a href="http://www.stopdiabetes.com/map.html?loc=stopd-footer" title="Movement Map">Movement Map</a></li>
+<li><a href="http://www.stopdiabetes.com/sponsors/?loc=stopd-footer" title="Stop Diabetes&reg; Sponsors">Sponsors</a></li>
+<li><a href="http://www.stopdiabetes.com/5-ways-to-act/ambassadors/?loc=stopd-footer" title="Stop Diabetes&reg; Celebrity Cabinet">Celebrity Cabinet</a></li>
+<li><a href="https://donations.diabetes.org/site/SPageServer/?pagename=SD_Advocacy_Center_Responsive&loc=stopd-footer" title="Action Center">Advocate</a></li>
+<li><a href="http://www.stopdiabetes.com/5-ways-to-act/volunteer/?loc=stopd-footer" title="Volunteer Near You">Volunteer</a></li>
+</ul>
+</li>
+<li><a href="http://www.stopdiabetes.com/whats-happening/?loc=stopd-footer" title="What's Happening">What's Happening</a>
+<ul>
+<li><a href="http://www.stopdiabetes.com/whats-happening/news-stories/?loc=stopd-footer" title="The Latest News">The Latest News</a></li>
+<li><a href="http://diabetesstopshere.org/?loc=stopd-footer" target="_blank" title="DiabetesStopsHere.org">Diabetes Stops Here Blog</a></li>
+<li><a href="http://community.diabetes.org/?loc=stopd-footer" target="_blank" title="Online Community">Online Community</a></li>
+<li><a href="http://www.stopdiabetes.com/whats-happening/get-social.html?loc=stopd-footer" title="Get Social">Get Social</a></li>
+</ul>
+</li>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/?loc=stopd-footer" title="Get the Facts">Get the Facts</a>
+<ul>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/diabetes-by-the-numbers.html?loc=stopd-footer" title="Diabetes by the Numbers">Diabetes by the Numbers</a></li>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/myths-and-facts.html?loc=stopd-footer" title="Myths and Facts About Diabetes">Myths and Facts</a></li>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/press-materials/?loc=stopd-footer" title="Press Materials">Press Materials</a></li>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/videos.html?loc=stopd-footer" title="American Diabetes Association Videos">Videos</a></li>
+<li><a href="http://www.stopdiabetes.com/get-the-facts/risk-test.html?loc=stopd-footer" title="Take the Diabetes Risk Test">Risk Test</a></li>
+</ul>
+</li>
+<li><a href="http://www.stopdiabetes.com/5-ways-to-act/donate/?loc=stopd-footer" title="Donate">Donate</a>
+<ul>
+<li><a href="http://main.diabetes.org/site/Donation2?df_id=11500&11500.donation=form1&loc=stopd-footer" title="Donate Now">Donate Now</a></li>
+<li><a href="http://www.shopdiabetes.org/?loc=stopd-footer" target="_blank" title="Shop for Stop Diabetes&reg; Products">Shop</a></li>
+<li><a href="https://w1.buysub.com/servlet/OrdersGateway?cds_mag_code=DFO&cds_page_id=179679&cds_response_key=I5FSTOP&loc=stopd-footer" target="_blank" title="Subscribe to Diabetes Forecast Magazine">Subscribe</a></li>
+<li><a href="http://www.stopdiabetes.com/5-ways-to-act/donate/promotions-that-give-back.html?loc=stopd-footer" title="Promotions That Give Back">Promotions That Give Back</a></li>
+<li><a href="http://main.diabetes.org/site/SPageServer?pagename=Cc_Home&loc=stopd">Constituent Center</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<!-- end .wrapper -->
+<div id="contact-details">
+<p class="links"><a href="http://www.diabetes.org/?loc=stopd-footer" target="_blank" title="Diabetes.org">diabetes.org</a> | <a href="http://www.stopdiabetes.com/about-us.html?loc=stopd-footer" title="About Stop Diabetes&reg;">About Us</a>  | <a href="http://www.stopdiabetes.com/get-the-facts/press-materials/contact-us.html?loc=stopd-footer" title="Contact Us">Contact Us</a> | <a href="http://www.diabetes.org/about-us/policies/privacy-policy.html?loc=stopd-footer" target="_blank" title="American Diabetes Association Privacy Policy">Privacy Policy</a> | <a href="http://www.diabetes.org/about-us/terms-of-use.html?loc=stopd-footer" target="_blank" title="American Diabetes Association Terms of Use">Terms of Use</a></p>
+<address class="vcard">
+<span id="contact">
+<span class="fn org" title="American Diabetes Association"><a class="url" href="http://diabetes.org.org?loc=stopd-footer" target="_blank" title="Diabetes.org">Diabetes.org</a></span>
+<span class="street-address">American Diabetes Association <span class="bull">&bull;</span>  1701 North Beauregard Street</span> <span class="bull">&bull;</span> <span class="locality">Alexandria</span>, <span class="region" title="virginia">VA</span> <span class="postal-code">22311</span> <span class="bull">&bull;</span> <span class="tel">1-800-DIABETES</span>
+</span><!-- end contact -->
+</address>
+<p id="copyright">Copyright 2009-2016  American Diabetes Association. All rights reserved. Use of this website constitutes acceptance of our <a href="http://www.diabetes.org/about-us/policies/terms-of-use.html?loc=stopd-footer" target="_blank" title="American Diabetes Association Terms of Use">Terms of Use</a>.</p>
+<a id="footer-logo" href="http://www.diabetes.org/?loc=stopd-footer" target="_blank" title="Diabetes.org"><img src="http://main.diabetes.org/images/content/pagebuilder/logo-footer.png" alt="American Diabetes Association" /></a>
+</div>
+</footer><!-- footer -->
+
+</div><!-- #wrapper -->
+
+<!--google analytics tracking code -->
+
+<!--google analytics tracking code -->
+
+<script src="https://donations.diabetes.org/js/analytics/ga_link_tracker_async-v2.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">
+
+  //Added error tracking
+  window.onerror = function(msg, file, line) { _gaq.push(['_trackEvent', 'JSError', file+':'+line, msg, null, true]); };
+  
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2200333-63']);
+                
+  // Decide how to track. (These are not mutually exclusive.)
+  var trackEvents = true;
+  var trackPageViews = false;
+
+             
+        // regular expressions matching the domain,
+        // make sure to list them from most
+        // specific to least specific
+        var trackedDomains = [/^https?:\/\/([\w_\.-]*diabetes\.org)\/?/
+, /^https?:\/\/(secure2\.convio\.net)\/?/
+, /^https?:\/\/(secure\.diabetes\.org)\/?/
+, /^https?:\/\/(main\.diabetes\.org)\/?/
+, /^https?:\/\/(donations\.diabetes\.org)\/?/
+, /^https?:\/\/(m\.diabetes\.org)\/?/
+, /^https?:\/\/(forecast\.diabetes\.org)\/?/
+, /^https?:\/\/(diabetesforecast\.org)\/?/
+, /^https?:\/\/(badride\.diabetes\.org)\/?/
+, /^https?:\/\/(professional\.diabetes\.org)\/?/
+, /^https?:\/\/(community\.diabetes\.org)\/?/
+, /^https?:\/\/(stepout\.diabetes\.org)\/?/
+, /^https?:\/\/(tour\.diabetes\.org)\/?/
+, /^https?:\/\/(driveoutdiabetes\.diabetes\.org)\/?/
+, /^https?:\/\/(schoolwalk\.diabetes\.org)\/?/
+, /^https?:\/\/(tracker\.diabetes\.org)\/?/
+, /^https?:\/\/(google.diabetes\.org)\/?/
+, /^https?:\/\/(m.diabetes\.org)\/?/
+, /^https?:\/\/(ridetolive.diabetes\.org)\/?/
+, /^https?:\/\/([\w_\.-]*shopdiabetes\.org)\/?/
+, /^https?:\/\/([\w_\.-]*diabetesstopshere\.org)\/?/
+, /^https?:\/\/([\w_\.-]*stopdiabetes\.com)\/?/];
+
+     // End configuration
+  
+  bfire.onLoad(bfire.ga.trackLinks, null, trackedDomains, trackEvents, trackPageViews);
+  bfire.ga.configureGA();
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  
+  //-------BEGIN YOUTUBE CUSTOM SCRIPT ADD-------------//
+  //Add Youtube api script tag
+  (function() {
+    var tag = document.createElement('script'); tag.type = 'text/javascript';
+    tag.src = ('https:' == document.location.protocol ? 'https://www' : 'http://www') + '.youtube.com/iframe_api';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tag, s);
+   })();
+   
+    //Check all iframes for youtube videos and add to array
+  $(document).ready(function() {  bfireyt.trackYouTube(); });
+
+  //Youtube api onready function - add tracking functions via api to youtube videos
+  function onYouTubeIframeAPIReady() {
+    for (var i = 0; i < bfireyt.videoArray.length; i++) {
+      bfireyt.playerArray[i] = new YT.Player(bfireyt.videoArray[i], {
+        events: {
+          'onStateChange': bfireyt.onPlayerStateChange
+        }
+      });   
+    }
+  }
+  //-------END YOUTUBE CUSTOM SCRIPT ADD-------------//
+
+
+
+//  Track login state if logged in
+  
+
+
+// Track source code if set
+
+
+//Convio Fix for referrers
+  if (typeof CONVIO!="undefined" && CONVIO){
+    if (CONVIO.referrer.length != 0) {
+      _gaq.push(['_setReferrerOverride',CONVIO.referrer]);
+    }
+  }
+  
+
+//fix for E-commerce Tracking
+//sets page title
+var pageTitle = "";
+var seperator = ":";
+pageTitle = document.title.replace(/^\s+|\s+$/g, '');
+var pageTitleWords = pageTitle.split(seperator);
+var pageTitleBeginning = pageTitleWords[0];
+var pageFullTitle = document.title;   
+
+//Track eCommerce if success page 
+
+
+
+//Account for all API donation forms
+
+
+
+
+
+//Tracks event registrations as ecommerce 
+
+// ;
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+var switchTo5x=true;
+// ]]></script>
+<script src="../js/sharethis-buttons.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+	stLight.options({
+
+		publisher:'75d84d4d-cf3c-4b59-a33c-c1b0a8b45e20',
+
+		offsetleft:'150',
+
+        publisherGA:" UA-2200333-63"
+
+	});
+// ]]></script>
+<!-- AdRoll Tracking Code-->
+
+<!-- Start AdRoll : Basic Pixel for all Pages -->
+<script type="text/javascript">
+adroll_adv_id = "JMY2CG2SORCAHN2RZSNKTG";
+adroll_pix_id = "DLG5THN2G5FFRFYONZPUFS";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+__adroll_loaded=true;
+var scr = document.createElement("script");
+var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+scr.setAttribute('async', 'true');
+scr.type = "text/javascript";
+scr.src = host + "/j/roundtrip.js";
+((document.getElementsByTagName('head') || [null])[0] ||
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+if(oldonload){oldonload()}};
+}());
+</script>
+<!-- End AdRoll Basic Tracking Code -->
+
+<!-- Start New AdRoll Account: Basic Pixel for all Pages: JES 2016 -->
+<script type="text/javascript">
+    adroll_adv_id = "BJ3SIWGF3BE4REWL2AC4A2";
+    adroll_pix_id = "6PKEDZNK3VDUXLQBBZMHDK";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script>
+<!-- End New AdRoll Account Basic Tracking Code -->
+<!-- AdRoll Tracking Code-->
+
+
+
+
+
+</body>
+
+</html>

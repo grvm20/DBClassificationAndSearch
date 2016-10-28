@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<base href="https://donations.diabetes.org/site/" />
+<title>American Diabetes Association:  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="Keywords" content=" " />
+<meta name="Description" content="" />
+<meta name="Robots" content="index, follow" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../yui3/yui/yui-min.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/convio/modules.js?version=2.9"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript">
+var Y = YUI({base: '../yui3/',
+insertBefore: 'yui_marker_loader_css', // insert all YUI module css before customstyle so it can be overridden
+debug: false, 
+modules: getModules('../', 'convio', true)});
+</script><noscript>&nbsp;</noscript>
+
+
+
+
+<script type="text/javascript" src="../js/utils.js"></script><noscript>&nbsp;</noscript>
+
+<script type="text/javascript" src="../js/obs_comp_rollup.js"></script><noscript>&nbsp;</noscript>
+
+
+<link href="../css/themes/default.css" rel="stylesheet" type="text/css" />
+<link href="../css/themes/alphacube.css" rel="stylesheet" type="text/css"/>
+
+
+<link href="../css/UserGlobalStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<link rel="stylesheet" type="text/css" id="yui_marker_loader_css" />
+<link href="../css/CustomStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/CustomWysiwygStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+<meta name="CnvHeaderVersion" content="v5.0" />
+
+
+<!-- ADDITIONAL METAS -->
+<!--<meta name="author" content="Daniel Hartanto" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8"/>
+
+<!-- SOCIAL MEDIA METAS -->
+<!--facebook-->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://donations.diabetes.org/site/SPageServer?pagename=TC_Tour2012_PC2_A" />
+<meta property="og:image" content="http://main.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta property="og:image:secure_url" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta property="fb:admins" content="daniel.hartanto" />
+	
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AmDiabetesAssn" />
+<meta name="twitter:creator" content="@AmDiabetesAssn" />
+<meta name="twitter:title" content="Tour de Cure: American Diabetes Association" />
+<meta name="twitter:description" content="American Diabetes Association's Tour de Cure: a series of fundraising cycling events held nationwide. The Tour is a ride, not a race, with routes designed for everyone from the occasional rider to the experienced cyclist." />
+<meta name="twitter:image:src" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta name="twitter:url" content="https://donations.diabetes.org/site/SPageServer?pagename=TC_Tour2012_PC2_A" />
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Tour de Cure: American Diabetes Association" />
+<meta itemprop="description" content="American Diabetes Association's Tour de Cure: a series of fundraising cycling events held nationwide. The Tour is a ride, not a race, with routes designed for everyone from the occasional rider to the experienced cyclist." />
+<meta itemprop="image" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+
+<link rel="shortcut icon" href="../images/ada_favicon.ico" type="image/vnd.microsoft.icon" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+//fallback reload 1.6.4 if LO jQuery throws undefined 
+if (!window.jQuery) {
+  var jqlo = document.createElement('script'); 
+  jqlo.type = 'text/javascript';  
+  jqlo.src = '../ws/js/jquery164.min.js';
+  document.getElementsByTagName('head')[0].appendChild(jqlo);
+}
+</script>
+
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="../ws/css/magnific-popup-min.css">
+<link rel="stylesheet" href="../ws/owl24/assets/owl.carousel.css">
+
+
+<link href="../ws/tr/tr2017/css/tc2017min.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<link href="../ws/tr/tr2017/css/tc2017min_ie.css" rel="stylesheet">
+<![endif]-->
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="../ws/js/respond_fix.js" type="text/javascript"></script></script>
+<![endif]-->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+function checkCookie(whichCookie) {
+    var ftimereg=getCookie(whichCookie);
+    if (ftimereg=="y") {
+        return true;
+    }
+}
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+//Initiation 
+ga('create', 'UA-2200333-63', 'auto');
+
+
+//Initiation -66
+ga('create', 'UA-2200333-66', 'diabetes.org', 'REDtracker');
+
+//Logged In - Custom Dimension 1
+
+//Source Code - Custom Dimension 2
+
+
+//Convio Fix for referrers
+if (typeof CONVIO!="undefined" && CONVIO){
+    if (CONVIO.referrer.length != 0) {
+	  ga('set', 'referrer', CONVIO.referrer);      
+    }
+}
+
+//this will pass the entire Convio Page URL
+ga('send', 'pageview', 'https://donations.diabetes.org/site/SPageServer?pagename=TC_Tour2012_PC2_A');
+
+//REDtracker
+var rturl = document.location.href;
+rturl = rturl.toLowerCase();
+if ((
+(rturl.indexOf("/site/donation2")  >=0) 
+|| (rturl.indexOf("donations.diabetes.org/site/spageserver?") >=0)
+|| (rturl.indexOf("donations.diabetes.org/site/spagenavigator") >=0)
+|| (rturl.indexOf("www.diabetes.org") >=0) 
+|| (rturl.indexOf("/goh/")  >=0) 
+)
+&&  (!(rturl.indexOf("fr_id=")>=0 )) 
+&&  (!(rturl.indexOf("NEXTURL=")>=0 ))
+)
+{
+ //console.log('URL:' + rturl.indexOf("donations.diabetes.org/site/spagenavigator"));
+ //console.log(document.location.href.indexOf("donations.diabetes.org/site/SPageNavigator/"));
+//First clean up and break the main URL 
+    var trackingURL;
+    var baseURL=[];
+    if (rturl.indexOf(";jsessionid") >= 0) //take out the session id
+	{ 
+	       rturl = rturl.substring(0,rturl.indexOf(";jsessionid")) + rturl.substring(rturl.indexOf("?"));
+		
+	} 
+
+    if (rturl.indexOf("#sthash") >= 0) //take out the sthash
+	{ 
+	       rturl = rturl.substring(0,rturl.indexOf("#sthash"));
+		
+	} 	 
+
+
+	if (rturl.indexOf("?") >= 0)
+		{ 
+ 
+        	baseURL = rturl.split("?");
+                //console.log('baseURL: ' + baseURL);
+		} 
+	else 
+		{	
+            baseURL[0] = rturl;	
+            //console.log('baseURL2: ' + baseURL[0]);	
+		}
+
+
+		if (rturl.indexOf("www.diabetes.org") >=0) 
+		{
+			trackingURL= baseURL[0];
+                        //console.log('trackingURL1: ' + trackingURL);
+		}
+		else 
+		{
+			//Start the formatting process 
+			trackingURL= baseURL[0]+"?"; 
+                        //console.log('trackingURL2: ' + trackingURL);
+			
+	 //for URLs with no parameters
+		if (!(baseURL[1])) {
+                    var paramsURL = baseURL[0].split("&");
+               } else {
+                  var paramsURL = baseURL[1].split("&");
+                      } 
+	
+		//this is only for dForms -- move inside IF
+		for (var i=0;i<paramsURL.length;i++)
+		{ 
+			if  (paramsURL[i].indexOf("df_id")!=-1){
+			trackingURL = trackingURL  +  paramsURL[i]+"&";
+                        //console.log('trackingURL3: ' + trackingURL);
+                break;
+                        
+			}
+		}
+    
+		for (var i=0;i<paramsURL.length;i++)
+		{ 
+			if  (paramsURL[i].indexOf(".donation=")!=-1) { 
+			trackingURL = trackingURL  +  paramsURL[i];
+                        //console.log('trackingURL4: ' + trackingURL);
+                break;
+                        
+			}
+		}	
+
+		for (var i=0;i<paramsURL.length;i++)
+		{ 
+			if (paramsURL[i].indexOf("pagename")!=-1) {
+			trackingURL = trackingURL  +  paramsURL[i];
+                        //console.log('trackingURL5: ' + trackingURL);
+                break;
+			}
+		}	
+	
+		} //End of formatting process for dForms
+            //console.log('trackingURL6a: ' + trackingURL);
+		if (trackingURL.indexOf("https") >= 0) {
+			trackingURL = trackingURL.replace(/^https?:\/\//,'');
+                        //console.log('trackingURL6: ' + trackingURL);
+		} else { 
+			trackingURL = trackingURL.replace(/^http?:\/\//,'');
+                        //console.log('trackingURL7: ' + trackingURL);
+		}
+		
+	//end else if there is URL parameter
+
+//Track the reformatted URL as a pageview 
+ ga('REDtracker.send','pageview', trackingURL);
+//console.log('pageview: ');
+//console.log(trackingURL);
+} //End Tracking condition.
+//Redtracker
+
+ga('require', 'ecommerce','ecommerce.js');
+//ecommerce donation thank you
+
+
+//ecommerce registration thank you
+
+
+
+//REDTracker
+
+
+ 
+
+</script>
+<!-- End Google Analytics -->
+
+
+<!-- RED reus portion -->
+
+<script type="text/javascript">
+	Y.use('jquery-noconflict', function() {
+		jQuery(function(){
+			var $errors = jQuery(".ErrorMessage");
+			if ($errors.length >0) {		
+				var errorMessages = "";
+				$errors.each( function(i){
+					var message = jQuery(this).find('.field-error-text').html();
+					var fieldName = jQuery(this).next().find('input').attr('name');
+
+					if (i == 0) {
+						errorMessages = message;
+
+
+					} else if (i == 1) {
+						errorMessages = errorMessages + "(" + i + ") '" + fieldName + "' : '" + message + "'";
+					} else {
+						errorMessages = errorMessages + ", (" + i + ") '" + fieldName + "' : '" + message + "'";
+					}
+				});
+				ga('send', 'event', 'Donation Form Validation Errors', 'dc:donationFormName', errorMessages );
+				//console.log(errorMessages);
+			}
+		});
+	}); 
+</script>
+
+
+
+
+
+
+
+<!-- AddThis -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56f3ff4c77f76ada"></script>
+
+ 
+
+</head>
+<body
+
+
+
+
+
+
+
+
+
+
+
+
+class="mobile"
+>	
+
+<!-- Google Tag Manager -->
+<!-- Universal Container -->
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5QPFWP');</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QPFWP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Tour Container -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WZXL5M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZXL5M');</script>
+<!-- End Google Tag Manager -->
+
+<div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;js.async=true;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="isTRRegClose" style="display:none;">
+
+</div>
+<div id="so16_topnav">
+<div class="centerDiv" style="height:inherit;">
+<div id="so16logo"><a href="http://tour.diabetes.org/"><img src="../ws/tr/tr2017/img/tour2.png" style="margin-top:8px;" border="0" /></a></div>
+<div id="so16cta">
+<a id="topnavctareglink" class="bluewhite-btn-cta" href="javascript:void(0);">
+<div class="cta-txt cta-txt-blue">Register <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+</a>
+<a id="topnavctadonatelink" class="redtxt-btn-cta" href="javascript:void(0);"><div class="cta-txt">Donate <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+</a>
+<a id="topnavctaloginlink" class="redtxt-btn-cta" href="javascript:void(0);">
+<div class="cta-txt" >Log In <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+</a>
+<a id="topnavctaothermenus" class="redtxt-btn-cta" href="javascript:void(0);">
+<div id="redhamburger" style="background-color:#C41230;height:100%;color:#FFF;">
+<i class="fa fa-bars" style="font-size:48px;"></i>
+<div class="clear:both;margin-top:1px;margin-bottom:1px;"><span style="font-size:20px;">menu</span></div>
+</div>
+</a>
+<i id="ctamobilemenu" class="fa fa-bars fa-3x"></i>
+</div>
+<div class="clearDiv">&nbsp;</div>
+</div>
+</div>
+
+<div id="so16_topnav_subblue">
+
+<div id="registerctamobile" class="ctamobilenav">Register <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+<div id="donatectamobile" class="ctamobilenav">Donate <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+<div id="loginctamobile" class="ctamobilenav">Log In <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+
+<div class="centerDiv" style="text-align:center;">
+
+<div class="clearDiv" style="height:0px;">&nbsp;</div>
+
+<div id="topnavwalksearch" style="background-color:#C41230;">
+<div id="searchByZipBoxCTA">
+<form id="searchwalkbyzipform">
+<div id="selectedZipValCTA" style="padding:10px; display:inline-block; zoom:1;*display:inline;/*border:solid 1px #D0D0D0;*/width:80px;background-color:#FFF;">Distance</div>
+<button class="dropdown-toggle" data-toggle="dropdown" style="padding:9px;">
+    <span class="fa fa-chevron-down"></span>
+</button>
+<ul id="zipmilesdropdownCTA" class="dropdown-menu">
+<li class="zipvaloptcta">25 MI</li>
+<li class="zipvaloptcta">50 MI</li>
+<li class="zipvaloptcta">75 MI</li>
+<li class="zipvaloptcta">100 MI</li>
+<li class="zipvaloptcta">200 MI</li>
+</ul>
+<input type="text" id="zipSearchValCTA" placeholder="zipcode" style="padding:0px 8px; height:40px;width:80px;vertical-align:top;"> 
+<button id="zipSearchSubmitCTA" type="submit" style="padding:8px;">
+<i class="fa fa-search"></i> 
+</button>
+</form>
+</div>
+<div id="ORTxtBoxCTA">OR</div>
+<div id="searchByStateBoxCTA">
+<div id="selectedStateValCTA" style="padding:10px; display:inline-block; zoom:1;*display:inline;/*border:solid 1px #D0D0D0;*/width:120px;background-color:#FFF;">Choose a State</div>
+<button class="dropdown-toggle" data-toggle="dropdown" style="padding:9px;">
+    <span class="fa fa-chevron-down"></span>
+</button>
+<ul id="statesearchdropdownCTA" class="dropdown-menu">
+<li id="7463" class="statevaloptcta">AK</li>
+<li id="7462" class="statevaloptcta">AL</li>
+<li id="7465" class="statevaloptcta">AR</li>
+<li id="7464" class="statevaloptcta">AZ</li>
+<li id="7466" class="statevaloptcta">CA</li>
+<li id="7467" class="statevaloptcta">CO</li>
+<li id="7468" class="statevaloptcta">CT</li>
+<li id="7564" class="statevaloptcta">DC</li>
+<li id="7469" class="statevaloptcta">DE</li>
+<li id="7470" class="statevaloptcta">FL</li>
+<li id="7471" class="statevaloptcta">GA</li>
+<li id="7472" class="statevaloptcta">HI</li>
+<li id="7482" class="statevaloptcta">IA</li>
+<li id="7473" class="statevaloptcta">ID</li>
+<li id="7474" class="statevaloptcta">IL</li>
+<li id="7568" class="statevaloptcta">IN</li>
+<li id="7483" class="statevaloptcta">KS</li>
+<li id="7484" class="statevaloptcta">KY</li>
+<li id="7485" class="statevaloptcta">LA</li>
+<li id="7488" class="statevaloptcta">MA</li>
+<li id="7487" class="statevaloptcta">MD</li>
+<li id="7486" class="statevaloptcta">ME</li>
+<li id="7489" class="statevaloptcta">MI</li>
+<li id="7490" class="statevaloptcta">MN</li>
+<li id="7581" class="statevaloptcta">MO</li>
+<li id="7582" class="statevaloptcta">MS</li>
+<li id="7491" class="statevaloptcta">MT</li>
+<li id="7498" class="statevaloptcta">NC</li>
+<li id="7501" class="statevaloptcta">ND</li>
+<li id="7492" class="statevaloptcta">NE</li>
+<li id="7494" class="statevaloptcta">NH</li>
+<li id="7495" class="statevaloptcta">NJ</li>
+<li id="7496" class="statevaloptcta">NM</li>
+<li id="7493" class="statevaloptcta">NV</li>
+<li id="7497" class="statevaloptcta">NY</li>
+<li id="7502" class="statevaloptcta">OH</li>
+<li id="7503" class="statevaloptcta">OK</li>
+<li id="7504" class="statevaloptcta">OR</li>
+<li id="7505" class="statevaloptcta">PA</li>
+<li id="7521" class="statevaloptcta">RI</li>
+<li id="7522" class="statevaloptcta">SC</li>
+<li id="7523" class="statevaloptcta">SD</li>
+<li id="7541" class="statevaloptcta">TN</li>
+<li id="7542" class="statevaloptcta">TX</li>
+<li id="7543" class="statevaloptcta">UT</li>
+<li id="7562" class="statevaloptcta">VA</li>
+<li id="7561" class="statevaloptcta">VT</li>
+<li id="7563" class="statevaloptcta">WA</li>
+<li id="7565" class="statevaloptcta">WV</li>
+<li id="7566" class="statevaloptcta">WI</li>
+ </ul>
+</div>
+<div class="clearDiv">&nbsp;</div>
+</div>
+
+
+<div id="topnavdonate" style="background-color:#C41230;">
+<div style="color:#FFF;padding-bottom:10px;margin-left:auto;margin-right:auto;">
+<div style="clear:both;height:10px;">&nbsp;</div>
+Donate to a Participant: <div class="retcarriagemobile">&nbsp;</div><input type="text" id="searchFirstName" name="searchFirstName" placeholder="firstname" style="padding:8px;width:80px;color:#000;margin-bottom:5px;"> &nbsp; <input type="text" id="searchLastName" name="searchLastName" placeholder="lastname" style="padding:8px;width:80px;color:#000;margin-bottom:5px;">&nbsp;&nbsp;<a id="pfindperson" class="whitewhite-btn-small" href="javascript:void(0);" onclick="pfindDonation('person',1);">Search</a></div>
+<div style="color:#FFF;padding-bottom:10px;margin-left:auto;margin-right:auto;">Donate to a Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="retcarriagemobile">&nbsp;</div><input type="text" id="searchTeam" name="searchTeam" placeholder="team name" style="padding:8px;width:180px;color:#000;margin-bottom:5px;">&nbsp;&nbsp;<a id="pfindteam" class="whitewhite-btn-small" href="javascript:void(0);" onclick="pfindDonation('team',1);">Search</a></div>
+</div>
+
+
+<div id="topnavlogin" style="background-color:#C41230;">
+<div style="clear:both;height:10px;">&nbsp;</div>
+
+
+<form id="login-form">
+<input type="hidden" name="method" value="login">
+<input type="text" id="username" name="user_name" placeholder="username" style="padding:8px;width:150px;color:#000;margin-bottom:5px;"> <div class="retcarriagemobile">&nbsp;</div>
+<input type="password" id="password" name="password" placeholder="password" style="padding:8px;width:150px;color:#000;margin-bottom:5px;"><div class="retcarriagemobile">&nbsp;</div>
+<!--<a id="loginbtn" class="whitewhite-btn-small" href="javascript:void(0);">Log In</a>-->
+<input id="login-button" name="submit" type="submit" value="login" class="whitewhite-btn-small">
+</form>
+<div class="clearDiv">&nbsp;</div>
+<div style="max-width:430px;min-width:320px;width:100%;margin:0 auto;">
+<p style="float:right;margin-right:5px;"><a style="color:#FFF;font-size:12px;" href="SPageServer?pagename=CC_PasswordRecovery" target="_blank">forgot password?</a></p>
+<div class="clearDiv">&nbsp;</div>
+</div>
+
+</div>
+
+<div id="topnavothersubmenus">
+<div ng-controller="siteNavMapController">
+
+
+
+
+<div ng-if="menu.primary" ng-cloak class="ng-cloak" ng-repeat="menu in sitenavs">
+<div class="primaryMNav">{{menu.title}} <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i>
+<div class="clearDiv" style="height:8px;">&nbsp;</div>
+<div class="subMNav" ng-if="menu.menus" style="width:100% !important;padding:0 !important;">
+<div ng-repeat="submenu in menu.menus"><a ng-href="{{submenu.action}}">{{submenu.title}} &nbsp; &raquo;</a></div>
+<div class="clearDiv" style="height:8px;">&nbsp;</div>
+</div>
+</div>
+</div>
+
+<style>
+.primaryMNav,.subMNav {
+    padding: 15px 0px 0px 0px;
+}
+</style>
+
+
+<!--<div ng-if="menu.primary" ng-cloak class="ng-cloak" ng-repeat="menu in sitenavs">
+<div class="primaryMNav">{{menu.title}} <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></div>
+</div>
+
+
+<div class="clearDiv">&nbsp;</div>
+
+<div ng-if="menu.primary" ng-cloak class="ng-cloak" ng-repeat="menu in sitenavs">
+<div class="subMNav" ng-if="menu.menus">
+<div ng-repeat="submenu in menu.menus"><a ng-href="{{submenu.action}}">{{submenu.title}} &nbsp; &raquo;</a></div>
+</div>
+</div>
+<div class="clearDiv">&nbsp;</div>-->
+
+
+
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+
+              
+        
+        	<div id="so16_rowid1_b">
+            <div class="centerDiv pageTitle">
+            
+            </div>
+            </div>
+                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+
+<div class="centerDiv page-content">
+<div id="actualContent"></div>
+
+
+
+
+
+
+
+<!-- override and force 'change goal' and 'checklist' to always show . DH -->
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+jQuery("#inner-checklist").css("display","block");
+jQuery("#inner-checklist").show();
+jQuery("#inner-checklist-fin").css("display","block");
+jQuery("#inner-checklist-fin").show();
+});
+
+
+function unhideMe(){
+jQuery("#embeddedParticipantCenter").contents().find("#progress-change-goal-link").removeClass("hidden-form");
+jQuery("#embeddedParticipantCenter").contents().find("#progress-change-goal-link").show();
+}
+
+function checkChangeGoal(){
+if(jQuery("#embeddedParticipantCenter").contents().find("#progress-change-goal-link").is(":visible")) {
+
+/*if((jQuery("#embeddedParticipantCenter").contents().find("#progress-change-goal-link").is(":visible")) && (jQuery("#inner-checklist").is(":visible"))) {*/
+   //alert("is visible");
+return true;
+} else {
+   //alert("is not visible yet");
+return false;
+}
+}
+
+</script>
+
+<script type="text/javascript">
+// use timer setInterval ?
+
+/*setInterval(function() {
+   unhideMe();
+}, 8000);*/
+
+var myCron = setInterval(function() {
+if (checkChangeGoal()){
+//alert ("stoping checker");
+
+window.clearInterval(myCron);
+} else {
+unhideMe();
+}
+}, 3000);
+
+</script>
+
+<!-- DEBUG ONLY
+<a href="javascript:void(0);" onclick="unhideMe();">Not seeing change fundraising goal?</a><br />
+<a href="javascript:void(0);" onclick="checkChangeGoal();">Is change goal there?</a>
+-->
+
+<!-- END OVERRIDE HIDE. DH -->
+
+<!-- custom JS file helper for PC2 -->
+<!-- set fr_id session variable used within suggested message stationeries -->
+
+
+
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+
+<script type="text/javascript">
+(function($) {
+  window.loadPC2View = function(hash) {
+    $('#embeddedParticipantCenter').attr('src', $('#embeddedParticipantCenter').attr('src').split('#')[0] + hash);
+  };
+  
+  /* information need within the iframe, referenced in custom.js */
+  window.customPC2 = {
+    cons: {
+      id: '',
+      
+      address: {
+        home: {
+          city: '',
+          postalCode: '',
+          stateProv: '',
+          street1: '',
+          street2: ''
+        }
+      },
+      
+      name: {
+        first: '',
+        last: ''
+      }
+    },
+    event: {
+      frId: '',
+      
+      dfId: '',
+      
+      publicName: '',
+      
+      chapter: {
+        address: '<br />',
+        email: '<a href="mailto:"></a>',
+        phone: ''
+      },
+      
+      date: '',
+      dateFriendly: '',
+      
+      locationName: '',
+      
+      time: ''
+    },
+    participant: {
+      isCaptain: false,
+      
+      amountRaised: '',
+      amountToGoal: '',
+      
+      url: 'http://main.diabetes.org/site/TR?pg=personal&fr_id=&px='
+    },
+    
+    team: {
+      id: '',
+      division: '',
+      dollarsRaised: '',
+      name: '',
+      numMembers: '',
+      
+      url: 'http://main.diabetes.org/site/TR?team_id=&pg=team&fr_id='
+    },
+    
+    company: {
+      id: ''
+    }
+  };
+})(jQuery);
+</script>
+
+<script type="text/javascript">
+/* pass the hash to the iframe onload */
+if(window.location.hash.indexOf('pc2=') != -1) {
+  loadPC2View(window.location.hash);
+}
+</script>
+
+
+<!-- begin custom content to pull into PC2 -->
+<!-- :title]] TRID: -->
+
+<!-- main participant page sidebar checklist -->
+<div id="dashboard-sidebar-checklist" style="display:none;">
+<ul id="new-dashboard-sidebar-list">
+    <li><a href="#personalpage-info" onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','compose'); return false;" style="padding-right:45px;">Update Your Personal Page</a></li>
+    <li><a onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" href="#email-compose" style="padding-right:152px;">Send Emails</a></li>
+    <li><a onclick="YAHOO.Convio.PC2.Utils.loadView('email','contacts'); return false;" href="#email-contacts" style="padding-right:116px;">Manage Contacts</a></li>
+    <li id="email-team"><a onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" href="#email-compose" style="padding-right:116px;">Email Team</a></li>
+    <li id="team-progress"><a onclick="YAHOO.Convio.PC2.Utils.loadView('report','team'); return false;" href="#addressbookimport-selectsource" style="padding-right:60px;">Check Team Progress</a></li>
+    <li><a href="#need-help" onclick="javascript:parent.window.scrollTop;parent.window.scrollBy(0,1200);" style="padding-right:152px;">Need Help?</a></li>
+    <li class="support-btn"><a href="http://tour.diabetes.org/site/TR?fr_id=&pg=entry" target=\"_blank\"style="padding-right:83px;">View Your Event Page</a></li>
+    <li id="manage-event-li" style="display:none;"><a id="manage-event-listitem" href="#" target="_blank">Manage Event</a></li>
+</ul>
+
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;margin-top:15px;">
+<div id="inner-checklist" style="display:none;"></div>
+<div id="inner-checklist-fin"></div>
+</div>
+
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;margin-top:15px;">
+<img src="../images/2012Tour/EventInformationphoto.jpg" width="198" />
+<div id="event-coordinator-info"></div>
+<div>
+<a href="http://tour.diabetes.org/site/TR?fr_id=&pg=entry" target="_blank" id="event-info-1" style="border:none;"><img src="../images/2012Tour/more-information-button.jpg" alt="More Event Information" width="198" /></a></div>
+</div>
+
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;margin-top:15px;">
+<!-- <div id="main-nav-support" class="ux-block side-content yui-module"> -->
+<p style="font-weight:bold;">Tour Center Support</p>
+<p>Call or email 24/7<br />
+<a href="http://tour.diabetes.org/site/TR?pg=informational&fr_id=&type=fr_informational&sid=11170" target="_blank">Click here</a> to submit a question<br />
+703-549-1500 x1438<br />
+Support Specialists are available<br />
+Mon-Fri 9:00am-5:00pm (EST),<br />
+except holidays</p>
+<!-- </div> -->
+</div>
+
+</div>
+
+<!-- Personal Progress sidebar -->
+<div id="personal-progress-new" style="display:none;">
+<div style="margin-left:4px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;width:192px;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Progress Tools</h3>
+  <ul style="line-height:28px;font-size:11pt;font-weight:bold;list-style:none;padding-left:0;margin-left:0;">
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#">Video Instructions for My Progress</a></li>-->
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#gift-add" onclick="YAHOO.Convio.PC2.Utils.loadView('gift','add'); return false;">Enter Check/Cash Donations</a></li>
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a id="" href="https://donations.diabetes.org/site/Donation2?df_id=&PROXY_ID=&PROXY_TYPE=20&FR_ID=" target="_blank">Donate to Myself</a></li>
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#email-compose" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;">Send Emails</a></li>
+</ul></div>
+</div>
+
+<!-- Team Progress sidebar, member -->
+<div id="team-info-new-member" style="display:none;">
+<div style="margin-left:3px;margin-bottom:15px;width:192px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Progress Tools</h3>
+  <ul style="line-height:28px;font-size:11pt;font-weight:bold;list-style:none;padding-left:0;margin-left:0;">
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#">Video Instructions for My Team Info</a></li>-->
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a target="_blank" href="team_roster.html">View Team Roster</a></li></ul>
+</div>
+</div>
+
+<!-- Team Progress sidebar, captain -->
+<div id="team-info-new-captain" style="display:none;">
+<div style="margin-left:3px;margin-bottom:15px;width:192px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Progress Tools</h3>
+  <ul style="line-height:28px;font-size:11pt;font-weight:bold;list-style:none;padding-left:0;margin-left:0;">
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#">Video Instructions for My Team Info</a></li>-->
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a target="_blank" href="team_roster.html">View Team Roster</a></li>
+<!--
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="http://main.diabetes.org/tdc12/TeamCaptainSampleEmails.zip" target="_blank">Sample Team Messages & Emails (download)</a></li>
+-->
+</ul>
+</div>
+</div>
+
+<!-- Fundraising Tools and Training Page -->
+<div id="s51-fundraising-tools" style="display:none;" class="hidden-form"><!-- confirm trID xx -->
+<div style="width:640px; float:left; margin-top:15px; margin-right:15px;">
+
+<!-- Send Emails -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:20px;">
+<div style="float:left;">
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Send Emails</h3>
+</div>
+<div style="clear:both;margin:auto;"></div>
+<div style="width:70px;float:left;margin-left:0.7em;"><img src="../images/2012Tour/pc2-fundraising-sendemailgraphic.png" width="67" height="56" /></div>
+<div style="float:left;width:495px;margin-left:0.7em;">
+<p style="margin:0 0 .5em 0;font-weight:bold;font-family:arial;font-size:12px;">Ask your family & friends to support you today!</p>
+<p style="margin: .5em 0;font-family:arial;font-size:12px;">Sending emails to your family, friends and co-workers can be an easy way to raise money for the American Diabetes Association and the Tour de Cure. Did you know the average online donation is higher than offline gifts? It's important to share your story about why you want to stop diabetes and why you ride in the Tour de Cure and once you do, you'll see that fundraising can be really fun!</p>
+<p style="margin:0;font-family:arial;font-size:12px;">Join the millions in the movement to Stop Diabetes<sup>&reg;</sup>: make a donation to yourself, then send a request today.</p>
+</div>
+<div style="float:right;margin:0.5em;"><a href="#email-compose" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" style="border:none;"><img src="../images/2012Tour/pc2-fundraising-sendemailbutton.jpg" width="245" height="29" style="border:none;" /></a>
+</div>
+<div style="clear:both;margin:auto;"></div>
+</div>
+
+<!-- Download Guides -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:10px;">
+<div>
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Download Guides</h3>
+</div>
+<div style="float:left;margin:0.7em;">
+<a href="http://tour.diabetes.org/tdc12/tdc_frguide.pdf" target="_blank" style="border:none;margin-right:15px;"><img src="../images/2012Tour/pc2-fundraising-fundraisingguidebutton.jpg" width="174" height="29" style="border:none;" alt="Fundraising Guide" /></a>
+<a href="http://tour.diabetes.org/tdc13/2013_tdc_pc_guide.pdf" target="_blank" style="border:none;margin-right:15px;"><img src="../images/2012Tour/pc2-fundraising-onlinefundraisingguide.jpg" width="222" height="29" style="border:none;" alt="Online Fundraising Guide" /></a>
+<a href="http://tour.diabetes.org/tdc13/2013_tdc_tc_guide.pdf" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-fundraising-teamcaptainguidebutton.jpg" width="183" height="29" style="border:none;" alt="Team Captain Guide" /></a></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+	<!-- VC Training -->
+
+
+<!-- Email Badges -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:10px;">
+<div>
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Email Badges</h3>
+</div>
+<div style="clear:both;margin:auto;"></div>
+<div style="height:100px;width:400px; text-align:center; margin: 20px auto;">
+<img src="../images/2012Tour/pc2-fundraising-emailbadgejointeam.jpg" width="156" height="64" style="margin-right:5px;" /> <img src="../images/2012Tour/pc2-fundraising-emailbadgesupport.jpg" width="160" height="64" />
+</div>
+<div style="margin-left:0.7em;margin-right:15px;">
+<p style="margin:0;font-family:arial;font-size:12px;">Email badges are a great way to show your support in the fight to stop diabetes each and every day!  Simply download the badges here and then use them in your email signature to help spread the word about this deadly disease.  Everyone who gets an email from you could be a future team member or someone that might be interested in donating on your behalf.  You never know who has been affected by diabetes.</p>
+<p style="margin-top:1em;font-family:arial;font-size:12px;">If you are unsure how to modify your email signature <a href="http://main.diabetes.org/images/tour/2011/Email_Badge_instructions.pdf" target="_blank">download the instructions for several popular email programs</a>.<br /><br />
+<span style="font-weight:bold;">For Individuals:</span>
+<br />
+Your Personal Page URL:<br />
+<br />
+http://main.diabetes.org/site/TR/Events/General?px=&pg=personal&fr_id=&utm_source=emailbadge&utm_medium=signature&utm_content=personal<br />&utm_campaign=TDC&s_src=signature&s_subsrc=TDC2013
+<br /><br />
+Image URL:<br />
+<a href="http://main.diabetes.org/images/2012Tour/pc2-fundraising-emailbadgesupport.jpg" target="_blank">http://main.diabetes.org/images/2012Tour/pc2-fundraising-emailbadgesupport.jpg</a>
+</p>
+
+</div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+
+<!-- Fundraise with Facebook -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:20px;">
+<div style="float:left;">
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Fundraise with Facebook</h3>
+</div>
+<div style="clear:both;"></div>
+<div style="width:70px;float:left;margin-left:0.7em;"> <img src="../images/2012Tour/pc2-fundraising-facebookgraphic.png" width="62" height="61" /></div>
+<div style="float:left;width:495px;margin-left:0.7em;">
+<p style="margin:0;font-family:arial;font-size:12px;">It's time to take social media by storm with the Tour de Cure boundless fundraising app for facebook! Simply click here and follow a few simple steps to adding the app to your facebook account. Once the app is installed simply share the link on your newsfeed and your friends are one click away from donating on your behalf safely and securely!</p>
+</div>
+<div style="float:right;margin:0.5em;">
+
+<a href="http://apps.facebook.com/bf-tourdcxiii/add/user///participantcenter_page" target="_blank" style="border:none;">
+
+<img src="../images/2012Tour/pc2-fundraising-facebookbutton.jpg" width="245" height="29" alt="" style="border:none;" /></a>
+
+</div>
+</div>
+
+<div style="clear:both;margin:auto;"></div>
+
+<!-- Fundraising Apps for Smartphone -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:20px;">
+<div>
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Fundraising Apps for Your Smartphone</h3>
+</div>
+<div style="float:left;margin-left:.5em;">
+<div style="float:left;width:62px;margin-right:5px;height:150px;"><img src="../images/2012Tour/iphone-pc2.png" width="62" /></div>
+<p style="margin:0;font-family:arial;font-size:12px;">Do your fundraising on the go with your Tour de Cure application for <a href="http://itunes.apple.com/us/app/ada-tour-de-cure/id432490881?mt=8" target="_blank">iPhone</a> and <a href="https://play.google.com/store/apps/details?id=com.ada.activities&hl=en" target="_blank">Android</a>. Keep current on Tour news, update your page, send emails, and check your progress - all from the palm of your hand!<br /><br />
+Download yours today through your device's App Store:<br /><br />
+<strong>iPhone App Store</strong><br />
+<a href="http://itunes.apple.com/us/app/ada-tour-de-cure/id432490881?mt=8" target="_blank">http://itunes.apple.com/us/app/ada-tour-de-cure/id432490881?mt=8</a><br /><br />
+<strong>Android Market</strong><br />
+<a href="https://play.google.com/store/apps/details?id=com.ada.activities&hl=en" target="_blank">https://play.google.com/store/apps/details?id=com.ada.activities&hl=en</a></p>
+</div>
+</div>
+
+<div style="clear:both;margin:auto;"></div>
+
+<!-- Matching Gifts -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:20px;">
+<div style="float:left;">
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Matching Gifts</h3>
+</div>
+<div style="clear:both;">
+<div style="width:97px;float:left;margin-left:0.7em;"> <img src="../images/2012Tour/pc2-fundraising-matchinggifts.png" width="97" height="75" /> </div>
+<div style="float:left;width:490px;margin-left:0.7em;">
+<p style="margin:0 0 .5em 0;font-weight:bold;font-family:arial;font-size:12px;">Does your employerhave a Matching Gifts program?</p>
+<p style="margin:0;font-family:arial;font-size:12px;">Many companies want to give back to organizations like the American Diabetes Association and be a good corporate steward in the community. The most common way they do that is through MATCHING GIFTS. Check with your employer to see if they have a matching gifts plan in place and your donations could easily double or triple! Every company might have a different process for how you get those additional matching gifts, but it&'s worth taking the time to find out. Let us help you through the process!</p>
+</div>
+</div>
+<div style="float:right;margin:0.5em;"><a href="http://tour.diabetes.org/tdc12/How%20to%20Make%20and%20Verify%20Matching%20Gifts.pdf" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-fundraising-matchinggiftsbutton.jpg" width="227" height="29" alt="" style="border:none;" /></a></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+<!-- Videos -->
+<div style="float:left;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;border-top:10px solid #000;width:640px;margin-bottom:20px;">
+<div style="float:left;">
+<h3 style="font-family:arial;font-size:18px;color:#000;margin:0.5em;">Videos</h3>
+</div>
+<div style="clear:both;margin:auto;"></div>
+<div style="float:left;margin:0.5em;">
+<p style="margin:0.5em;font-family:arial;font-size:12px;">
+<a href="http://www.youtube.com/watch?v=MIbwKz59vSQ" target="_blank">"Are You Ready?" Music Video</a><br /><br />
+<a href="http://www.youtube.com/watch?v=1mD3q2Tmmr0&feature=relmfu" target="_blank">Red Rider and Team Red Informational Video</a><br /><br />
+<a href="http://www.youtube.com/watch?v=wIZXGfU74fQ" target="_blank">A to Z Informational Video</a>
+</p>
+</div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+</div>
+<!-- end of left column -->
+
+<!-- start of right column -->
+<div style="float:left;width:285px;margin-top:15px;">
+<div style="border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Resources</h3>
+<p style="line-height:28px;font-size:11pt;font-weight:bold;">
+<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom" /> <a href="http://youtu.be/tRqX03ouHjA" target="_blank">Video Instructions for<br />Fundraising with Facebook</a><br />
+<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom" /> <a href="#email-compose" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;">Send Emails</a><br />
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="http://tour.diabetes.org/site/DocServer/tdc_cycle_guide_web_fnl_lo.pdf?docID=72541" target="_blank">Cyclist Guide</a><br />-->
+<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="http://tour.diabetes.org/tdc12/tdc_frguide.pdf" target="_blank">Fundraising Guide</a><br />
+ <img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="http://tour.diabetes.org/tdc13/2013_tdc_tc_guide.pdf" target="_blank">Team Captain Guide</a><br />
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Local Route Guide</a><br />-->
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Email Badges</a><br />-->
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Fundraising with Facebook</a><br />-->
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Smartphone Fundraising Apps</a><br />-->
+
+
+
+<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="http://tour.diabetes.org/tdc12/How%20to%20Make%20and%20Verify%20Matching%20Gifts.pdf" target="_blank">Matching Gifts</a><br />
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Sending Ecards</a><br />-->
+<!--<img src="../images/2012Tour/red-list-arrow.jpg" align="bottom"> <a href="#">Videos</a><br />-->
+</p>
+</div>
+
+<div style="margin-top:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<img src="../images/2012Tour/fundraising-tools-mission-moment.jpg" />
+<p style="margin:0.5em 0em .5em 0em;font-family:arial;font-size:12px;font-weight:bold;color:#A5192A;">Mission Moment</p>
+<p style="margin:0.5em;font-family:arial;font-size:12px;"><span style="font-weight:bold;">American Diabetes Association Camps for Kids with Diabetes</span><br /><br />
+When you support the American Diabetes Association you not only raise funds for diabetes research, but you also help fund our programs such as Camps for Kids with diabetes.  Each summer the American Diabetes Association welcomes more than 10,000 kids nationwide into our day and weekly camps.  Check out what campers have to say about going to an ADA camp; they want to extend their thanks to you!<br /><br />
+"The best thing about camp was that I realized that there are a lot of people just like me."<br />
+"I made a lot of friends and I found out if you take your insulin and watch your carbs more that my blood sugars are normal."<br />
+"I had a great time at diabetes Camp. There were so many things to do and my numbers were great! I made a lot of friends and we stick together like peas in a pod!"<br />
+"I had so much fun.  I can't wait to go back next year!"</p>
+</div>
+
+<div style="margin-top:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<img src="../images/2012Tour/pc2-fundraising-diabetesfacts_graphic.jpg" width="245" height="97" />
+<p style="margin:0.5em 0em .5em 0em;font-family:arial;font-size:12px;font-weight:bold;color:#A5192A;">Diabetes Facts</p>
+<p style="margin:0.5em;font-family:arial;font-size:12px;">When you are writing your fundraising emails or asking people to join your team, it is important to include facts about why you are supporting the American Diabetes Association and the fight to Stop Diabetes.  Help us share the work of the Association and our mission by including the following facts below in your fundraising and recruitment emails, letters and other fundraising activities.</p>
+<p style="margin:1em 0em;padding:0;font-family:arial;font-size:12px;"><a href="http://www.diabetes.org/diabetes-basics/diabetes-statistics/?utm_source=WWW&utm_medium=DropDownDB&utm_content=Statistics&utm_campaign=CON" target="_blank"><img src="../images/2012Tour/More_Diabetes_Facts.jpg" style="border:none;" alt="More Diabetes Facts" /></a></p>
+</div>
+</div>
+</div>
+<div id="s51-training-tools" style="display:none;" class="hidden-form"><style type="text/css">
+
+</style>
+
+<!-- Cyclist Guide -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-right:20px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Cyclist Guide</h3>
+	<div style="width:75px;float:left;margin-left:.7em;">
+    	<img src="../images/2012Tour/pc2-training-guide.jpg" width="67" height="88" />
+    </div>
+    <div style="width:360px;float:right;padding-right:.5em;">
+    	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">Refer to the Tour de Cure Cyclist Guide as the perfect Training Resource!</p>
+        <p style="margin:0em;font-family:arial;font-size:10pt;">If you want to find some great training resources all in one place, the Tour de Cure Cyclist Guide is for you!  This guide includes information about safe riding, group riding, stretching, hydration, nutrition, a sample training plan and information about the Tour de Cure, as well!</p>
+        <div style="float:right;margin-top:30px;"><a href="http://tour.diabetes.org/tdc12/tdc_cyclist_guide.pdf" target="_blank" style="border:none;"><img src="../images/2012Tour/Download_the_Cyclist_Guide.jpg" alt="" style="border:none;" /></a></div>
+    </div>
+    <div style="clear:both;margin:auto;"></div>
+</div>
+
+<!-- Gold's Gym -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Gold's Gym</h3>
+	<div style="width:75px;float:left;margin-left:.7em;">
+    	<img src="../images/2012Tour/pc2-training-golds.png" width="72" height="80" />
+    </div>
+    <div style="width:360px;float:right;padding-right:.5em;">
+    	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">Know your own strength.</p>
+        <p style="margin:0em;font-family:arial;font-size:10pt;">Gold's Gym, national sponsor of Tour de Cure, is a great place to go for expert fitness advice.   Check out their training plans and get information from their personal cycling coaches and from their renowned fitness experts!</p>
+        <div style="float:right;margin-top:47px;"><a href="http://www.goldsgym.com/healthy/newsletter/2009-03/tour-de-cure.php" target="_blank" style="border:none;"><img src="../images/2012Tour/Access_the_Golds_Gym_12_week_Training_Plan.jpg" alt="Access the Golds Gym 12 week training plan." style="border:none;" /></a></div>
+    </div>
+    <div style="clear:both;margin:auto;"></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+<!-- CTS & Chris Carmichael -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-right:20px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Chris Carmichael & Carmichael<br />Training Systems</h3>
+<div style="width:75px;float:left;margin-left:.7em;"><a href="http://trainright.com/" target="_blank"><img src="../images/2012Tour/pc2-training-cts.png" width="76" height="37" /></a></div>
+<div style="width:360px;float:right;padding-right:.5em;">
+<p style="margin:0em;font-family:arial;font-size:10pt;">We are pleased to welcome back Chris Carmichael as the honorary chair of the Tour de Cure! Chris has devoted more than 20 years to helping amateur and professional athletes achieve their performance goals, from improved health to completing your first Century, all the way up to Ironman and Tour de France victories. Now Chris wants to help our Tour riders be the best they can be!</p>
+<ul style="margin:10px 0 0 0;padding:0px;">
+<li style="margin-bottom:10px;padding:0px;"><a href="http://tour.diabetes.org/site/PageServer?pagename=TC_cts_training_tips" target="_blank">DOWNLOAD</a> Chris&#8217; Preparation Tips for the Tour de Cure</li>
+<li style="margin-bottom:10px;padding:0px;"><a href="http://www.trainright.com/register" target="_blank">REGISTER</a> to receive the CTS Newsletter</li>
+<li style="margin-bottom:10px;padding:0px;"><a href="http://trainright.com/blog/" target="_blank">FOLLOW CHRIS</a> by reading his weekly blog</li>
+</ul>
+<div style="float:right;margin-top:0;"><a href="http://tour.diabetes.org/site/PageServer?pagename=TC_carmichael" target="_blank"><img src="../tdc13/pc2-training-button_CTS.jpg" alt="" width="245" height="29" style="border:none;" /></a></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+</div>
+
+<!-- Team WILD - Training with Diabetes -->
+
+<div style="float:left; border-top:10px solid #000; width:460px; margin-bottom:20px; background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Exercising & Training with Diabetes</h3>
+	<div style="width:95px;float:left;margin-left:.7em;">
+  <a href="http://teamwild.org/tour-de-cure/" target="_blank"><img src="../images/2012Tour/team_wild_logo.jpg" width="100" height="45" /></a>
+  </div>
+  <div style="width:340px;float:right;padding-right:.5em;">
+    	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">Red Riders can be proud of exercising and riding with diabetes!</p>
+      <p style="margin:0em;font-family:arial;font-size:10pt;">Red Riders are all participants that have type 1 or type 2 diabetes, and we are excited about our new training resources brought to you by TeamWILD.</p>
+<ul style="margin:10px 0 0 0;padding:0px;">
+<li style="margin:0 0 10px 2px;padding:0px;"><a href="http://tour.diabetes.org/tdc12/redrider_teamwild_guide.pdf" target="_blank">DOWNLOAD</a> the Red Rider Cycling with Diabetes GUIDE.</li>
+<li style="margin-left:0 0 10px 2px;padding:0px;"><a href="http://tour.diabetes.org/tdc12/redrider_teamwild_worksheet.pdf" target="_blank">DOWNLOAD</a> the video worksheet that will help you take great notes while you view the video below.</li>
+</ul>
+  <div style="float:right;margin-top:70px;">
+<a href="http://vimeopro.com/livinglifepro/tour-de-cure-teamwild-training-video" target="_blank" style="border:none;"><img src="../tdc12/pc2-training-button_teamWILD.jpg" alt="" style="border:none;" /></a></div>
+    </div>
+<div style="clear:both;margin:auto;"></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+<!-- Hydration -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-right:20px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Hydration</h3>
+	<div style="width:75px;float:left;margin-left:.7em;">
+    	<img src="../images/2012Tour/pc2-training-hydration.png" width="60" height="88" />
+    </div>
+    <div style="width:360px;float:right;padding-right:.5em;">
+    	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">You&#8217;ve heard it before, riders need to drink, drink, and drink!</p>
+        <p style="margin:0em;font-family:arial;font-size:10pt;">Fluids are crucial to your performance and sense of well-being, but it is amazing how few cyclists heed this advice. You might forget to drink because of the excitement of the ride and become dehydrated which is a common problem among cyclists, especially in warm weather.  To prevent this you must always drink plenty of fluids while you ride and also prepare in advance.  Check out even more of our hydration secrets.</p>
+        <div style="float:right;margin-top:15px;"><a href="http://tour.diabetes.org/site/PageServer?pagename=TC_hydration" target="_blank" style="border:none;"><img src="../images/2012Tour/clickheretolearnmore.jpg" alt="" width="245" height="29" style="border:none;" /></a></div>
+    </div>
+    <div style="clear:both;margin:auto;"></div>
+</div>
+
+<!-- Stretching -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Stretching</h3>
+	<div style="width:75px;float:left;margin-left:.7em;">
+    	<img src="../images/2012Tour/pc2-training-stretching.png" width="80" height="94" />
+    </div>
+    <div style="width:360px;float:right;padding-right:.5em;">
+    	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">Getting your muscles ready to ride!</p>
+        <p style="margin:0em;font-family:arial;font-size:10pt;">Stretching is extremely important in keeping your muscles flexible and injury free, but there are a lot of things people do wrong when stretching. We&#8217;ve got some helpful hints for you such as warming up first, stretching equally on both sides your body and much more!</p>
+        <div style="float:right;margin-top:63px;"><a href="http://tour.diabetes.org/tdc12/Stretching,%20Nutrition%20and%20Hydration.pdf" target="_blank" style="border:none;"><img src="../images/2012Tour/clickheretolearnmore.jpg" alt="Click here to learn more about stretching" width="245" height="29" style="border:none;" /></a></div>
+    </div>
+    <div style="clear:both;margin:auto;"></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+<!-- Nutrition -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-right:20px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+<!--
+<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Clif Bar Nutrition 101 Podcast</h3>
+<div style="width:75px;float:left;margin-left:.7em;">
+<a href="http://www.clifbar.com/" target="_blank"><img src="../images/2012Tour/pc2-training-cliff.jpg" width="75" height="69" /></a>
+</div>
+<div style="width:360px;float:right;padding-right:.5em;">
+<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">National Tour de Cure nutrition sponsor Clif Bar brings you a Tour de Cure Clif Cast!</p>
+<p style="margin:0em;font-family:arial;font-size:10pt;">Clif Bar and the Tour de Cure are offering information and insights on Sports Nutrition for riders with a newly released Clif Cast! Get the lowdown on proper nutrition, hydration, and other tips and tricks dedicated to getting the most out of your training and your Tour de Cure efforts!</p>
+<div style="float:right;margin-top:60px;">
+<a href="http://tour.diabetes.org/tdc13/CLIFCAST_ADA_NUTRTION FINAL.mp3" target="_blank" style="border:none;"><img src="../tdc13/pc2-training-button_ClifBar.jpg" alt="" style="border:none;" /></a></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+-->
+</div>
+
+<!-- Sample Training Plan -->
+
+<div style="float:left;border-top:10px solid #000;width:460px;margin-bottom:20px;background:url(https://secure2.convio.net/adap/images/2012Tour/pc2-training-gradient.jpg) repeat-x #FFF;">
+	<h3 style="font-family:arial;font-size:18pt;color:#000;margin:.5em;">Sample Training Plan</h3>
+	<div style="width:75px; float:left; margin-left:.7em;">
+		<img src="../images/2012Tour/pc2-training-cyclist.png" width="81" height="73" />
+  </div>
+  <div style="width:360px;float:right;padding-right:.5em;">
+ 	<p style="margin:0em 0em .5em 0em;font-family:arial;font-size:10pt;font-weight:bold;">We can help you go the distance to Stop Diabetes!</p>
+   <p style="margin:0em;font-family:arial;font-size:10pt;">If you are looking to ride 30, 60 or 100 miles we have a great daily training schedule for you! These sample training programs are designed for someone who can already cycle 10 miles at a 10 mph pace without difficulty. It is only a guideline. If you cannot currently cycle 10 miles then start with 3 miles, build up over the next 2 weeks to a 10-mile ride, and then start the program.</p>
+   <div style="float:right;margin-top:30px;"><a href="http://tour.diabetes.org/tdc12/sampletrainingprogram.pdf" target="_blank" style="border:none;"><img src="../images/2012Tour/Get_Our_Sample_Training_Plan.jpg" alt="Get our sample training plan."  style="border:none;" /></a></div>
+   </div>
+   <div style="clear:both;margin:auto;"></div>
+</div>
+<div style="clear:both;margin:auto;"></div>
+</div>
+
+<!-- New Email Sidebar -->
+<div id="new-email-sidebar" style="display:none;">
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Email Tools</h3>
+  <ul style="line-height:28px;font-size:11pt;font-weight:bold;list-style:none;padding-left:0;margin-left:0;"><!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#">Video Instructions for Personal Page</a></li>-->
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#email-compose" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;">Template Emails</a></li>-->
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#email-drafts" onclick="YAHOO.Convio.PC2.Utils.loadView('email','drafts'); return false;">Drafts</a></li>
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#email-sent" onclick="YAHOO.Convio.PC2.Utils.loadView('email','sent'); return false;">Sent Messages</a></li>
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a onclick="YAHOO.Convio.PC2.Utils.loadView('addressbookimport','selectsource'); return false;" href="#addressbookimport-selectsource">Import Contacts</a></li>
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a  onclick="YAHOO.Convio.PC2.Utils.loadView('email','contacts'); return false;" href="#email-contacts">Manage Contacts</a></li></ul>
+<div id="add-one-contact-new"></div>
+</div>
+
+<div id="#email-replace" style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;margin-top:15px;">
+  <h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Video Instructions</h3>
+  <ul style="margin-bottom: 15px;">
+    <li><a href="http://youtu.be/6Acf4dGAqVk" target="_blank">Uploading Contacts</a></li>
+    <li><a href="http://youtu.be/aOZy8q7W1PA" target="_blank">Sending Emails</a></li>
+  </ul>
+  <p>Spice Up Your Messages: Choose one of the layout options (including fun e-cards) under your message and select "Preview" to see how it will look.</p>
+</div>
+
+</div>
+
+<!-- New Personal Page Sidebar -->
+<div id="new-personalpage-sidebar" style="display:none;">
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;">
+<h3 style="font-size:11pt;color:#A5192A;font-family:arial;font-weight:bold;padding:0pt;margin:0;">Personal Page Tools</h3>
+  <ul style="line-height:28px;font-size:11pt;font-weight:bold;list-style:none;margin-left:0;padding-left:0;">
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a id="create-url-link" onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','compose'); return false;" href="#personalpage-compose">Content</a></li>
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a href="#">Video Instructions for Personal Page</a></li>-->
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','compose'); return false;" href="#personalpage-compose">My Personal Page</a></li>-->
+<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','media'); return false;" href="#personalpage-media">Add/Edit Photos or Video</a></li>
+<!--<li style="background-image: url(../images/2012Tour/red-list-arrow.jpg);background-repeat: no-repeat;background-position:0 .5em;padding-left:0.8em;"><a onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','components'); return false;"  href="#personalpage-components">Customize My Page</a></li>-->
+  </ul>
+</div>
+
+<div style="margin-left:15px;border:10px solid #ECECEC;padding:10px;-webkit-box-shadow: inset 0px 0px 0px 1px #000000;-moz-box-shadow: inset 0px 0px 0px 1px #000000;box-shadow: inset 0px 0px 0px 1px #000000;margin-top:15px;">
+<img src="../images/2012Tour/EventInformationphoto.jpg" width="198" />
+<div id="event-coordinator-info-ppage"></div>
+<div>
+<a href="http://tour.diabetes.org/site/TR?fr_id=&pg=entry" target="_blank" id="event-info-3" style="border:none;"><img src="../images/2012Tour/more-information-button.jpg" alt="More Event Information" width="198" /></a></div>
+</div>
+
+</div>
+
+<!-- Left Section Home Page Content -->
+<div id="left-sections" style="display:none;">
+
+
+
+<div id="bd-what-next" class="clearfix">
+<h2 id="msg_cat_what_next_question">What to do next?</h2>
+<div id="what-next-answer">You have sent no emails to your family or friends. Add them to your Address Book and email them about your fundraising effort.</div>
+</div>
+
+<div id="fundraise-to-stop-diabetes" class="ux-block2" style="margin-top:20px;background:url('https://donations.diabetes.org/images/2012Tour/pc2-home-left-section-bg.jpg') repeat-x;padding-bottom:20px;">
+<h3 style="color:#000;font-weight:bold;font-size:18px;">Fundraise To Stop Diabetes</h3>
+  <a id="updatepersonalpagebadge" href="#personalpage-info" onclick="YAHOO.Convio.PC2.Utils.loadView('personalpage','compose'); return false;" style="border:none;margin-right:20px;"><img src="https://donations.diabetes.org/images/stepout/2011/UpdateYourPersonalPage.jpg" style="border:none;"></a>
+  <a href="https://donations.diabetes.org/site/Donation2?df_id=&PROXY_ID=&PROXY_TYPE=20&FR_ID=" target=\"_blank\" style="margin-right:20px;"><img src="../images/stepout/2011/fundraise-donate.jpg" /></a>
+  <a href="#email-compose" onclick="YAHOO.Convio.PC2.Utils.loadView('email','compose'); return false;" style="margin-right:20px;"><img src="../images/stepout/2011/fundraise-emailsend.jpg" /></a>
+  <a href="#pc2=fundraising-tools" onclick="YAHOO.Convio.PC2.Utils.loadView('fundraising','tools'); return false;" style="border:none;"><img src="https://donations.diabetes.org/images/2012StepOut/pages/Fundraising_Tools.jpg" style="padding-right:16px;border:none;"></a>
+</div>
+
+<!-- VIDEO section -->
+<div id="videos-outer2">
+<div style="background:#ECECEC; border-top:#000 10px solid; padding:10px;" id="videos">
+<h3 style="font-family:arial;font-size:24px;font-weight:bold;padding-left:20px;">Video Tutorials</h3>
+<div id="embedded-video">
+<div id="video-1"><iframe width="400" height="225" src="https://www.youtube.com/embed/kDitsw8V4G0?rel=0" frameborder="0" allowfullscreen></iframe></div>
+<div id="video-2" style="display: none;"><iframe width="400" height="225" src="https://www.youtube.com/embed/6Acf4dGAqVk?rel=0" frameborder="0" allowfullscreen></iframe></div>
+<div id="video-3" style="display: none;"><iframe width="400" height="225" src="https://www.youtube.com/embed/aOZy8q7W1PA?rel=0" frameborder="0" allowfullscreen></iframe></div>
+<div id="video-4" style="display: none;"><iframe width="400" height="225" src="https://www.youtube.com/embed/tRqX03ouHjA?rel=0" frameborder="0" allowfullscreen></iframe></div>
+</div>
+<div id="video-menu">
+<ul>
+<li id="video-1-li" onclick="switchVideo(this.id);"><span style="font-weight:bold;cursor:pointer;">General Overview</span><br />Explore the Tour Center.</li>
+<li id="video-2-li" onclick="switchVideo(this.id);"><span style="font-weight:bold;cursor:pointer;">Uploading Contacts</span><br />Learn how to import your address book or add contacts one-at-a-time.</li>
+<li id="video-3-li" onclick="switchVideo(this.id);"><span style="font-weight:bold;cursor:pointer;">Sending Emails</span><br />Set up and send email messages quickly and easily.</li>
+<li id="video-4-li" onclick="switchVideo(this.id);"><span style="font-weight:bold;cursor:pointer;">Fundraising with Facebook</span><br />Use Social Media to increase fundraising.</li>
+</ul>
+</div>
+<div style="clear:both;margin:auto;"></div>
+
+</div></div>
+
+<div id="social-networking" class="ux-block2" style="margin-top:20px;background:url('https://donations.diabetes.org/images/2012Tour/pc2-home-left-section-bg.jpg') repeat-x;padding-bottom:20px;clear:both;">
+<h3 style="color:#000;font-weight:bold;font-size:18px;">Social Networking</h3>
+    <div style="clear:both;padding-top:10px;">
+      <p style="margin-bottom:10px;">You can also network with</p>
+    <a href="http://www.facebook.com/pages/Tour-de-Cure/78040609529" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-home-facebook.jpg" alt="Facebook." style="margin-right:15px;" /></a>
+      <a href="http://twitter.com/#!/AmDiabetesAssn" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-home-twitter.jpg" alt="Twitter." style="margin-right:15px;" /></a>
+      <a href="http://www.youtube.com/user/AmericanDiabetesAssn" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-home-youtube.jpg" alt="Youtube." style="margin-right:15px;" /></a>
+      <a href="http://www.flickr.com/photos/adatourdecure/" target="_blank" style="border:none;"><img src="../images/2012Tour/pc2-home-flickr.jpg" alt="Flickr." style="margin-right:15px;" /></a>
+    </div>
+</div>
+
+<div id="new-recent-activity" class="ux-block2" style="margin-top:20px;background:url('https://donations.diabetes.org/images/2012Tour/pc2-home-left-section-bg.jpg') repeat-x;padding-bottom:20px;clear:both;"></div>
+
+<div id="help-left" class="ux-block2" style="margin-top:20px;background:url('https://donations.diabetes.org/images/2012Tour/pc2-home-left-section-bg.jpg') repeat-x;padding-bottom:20px;clear:both;">
+<h3 style="color:#000;font-weight:bold;font-size:18px;">Help</h3>
+<p style="font-size:12px;font-family:arial;margin-bottom:15px;">If you need assistance using your Tour Center, our support personnel are here to help. Please contact your local area Tour staff or <a href="http://tour.diabetes.org/site/TR?pg=informational&fr_id=&type=fr_informational&sid=11170" target="_blank">click here</a> to submit a question for technical support:</p>
+<p><strong>Local Tour Staff:</strong> see "Event Information" box, above right, or call 1-888-DIABETES<br /><br />
+<strong>ADA Online Support:</strong> 703-549-1500 x1438 or <a href="http://tour.diabetes.org/site/TR?pg=informational&fr_id=&type=fr_informational&sid=11170" target="_blank">click here</a> to submit a question<br />
+Mon-Fri 9:00am-5:00pm (EST), except holidays</p>
+</div>
+
+</div>
+
+
+
+<!-- end of custom content -->
+
+<!-- Embed PC2 -->
+<div>
+<span id="embeddedParticipantCenterErrorMessage" >Please log in to access your TeamRaiser event's participant center.</span>
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- patching Convio Bug missing closing tag on responsive local/national company top listing component-->
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+<div class="clearDiv">&nbsp;</div>
+
+
+
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+
+
+
+
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+<div class="clearDiv">&nbsp;</div>
+
+
+
+
+
+<div class="clearDiv">&nbsp;</div>
+<div class="centerDiv">
+<h2><strong>Our National Sponsors</strong></h2>
+<!--<div class="ntl-sponsor"><a href="http://www.goldsgym.com/" target="_blank"><img src="../ws/tr/tr2014/img/national_team/golds-gym-logo-2014.png" alt="Golds Gym" style="max-width:180px" /></a></div>-->
+
+<div class="ntl-sponsor"><a href="http://www.lillydiabetes.com/Pages/index.aspx" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/lilly.png" alt="Lilly" /></a></div>
+<div class="ntl-sponsor"><a href="http://www.primalwear.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/primal.png" alt="Primal Wear" /></a></div>
+
+<div class="ntl-sponsor"><a href="http://www.goldsgym.com/" target="_blank"><img src="../ws/tr/tr2014/img/national_team/golds-gym-logo-2014.png" alt="Golds Gym" style="max-width:180px;width:80%;" /></a></div>
+
+
+<!--<div class="ntl-sponsor"><a href="http://www.gomacro.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/gomacro.png" alt="Go Macro" /></a></div>-->
+<!--<div class="ntl-sponsor"><a href="http://www.beewellforlife.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/beewell.png" alt="BeeWell" /></a></div>-->
+<div class="clearDiv">&nbsp;</div>
+</div>
+
+
+
+
+<div class="clearDiv">&nbsp;</div>
+<div class="greydiv">
+
+<div class="centerDiv" style="padding:30px 10px;font-weight:bold;color:#FFF;font-size:16pt;"><div style="display:inline-block;zoom:1;*display:inline;width:50%;vertical-align:top;"><!--#--><span id="usrdefineinstatag" style="display:none;">stepoutdiabetes</span></div><div style="display:inline-block;zoom:1;*display:inline;width:50%;vertical-align:top;text-align:right;"><a href="https://www.facebook.com/adatourdecure" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>&nbsp;<a href="https://twitter.com/AmDiabetesAssn" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>&nbsp;<a href="https://www.pinterest.com/amdiabetesassn/step-out-walk-to-stop-diabetes/" target="_blank"><i class="fa fa-pinterest fa-lg"></i></a>&nbsp;<a href="http://www.youtube.com/user/AmericanDiabetesAssn?utm_source=StepOut&utm_medium=SocialMedia&utm_campaign=YT" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>&nbsp;</div></div>
+<div class="clearDiv">&nbsp;</div>
+<div id="instafeedresult" class="owl-carousel" style="text-align:center;display:none;"></div>
+<div class="clearDiv">&nbsp;</div>
+
+
+<div class="centerDiv">
+<div id="footerLeft">
+<p style="font-size:12pt;"><strong>&copy; 2016 <a href="http://diabetes.org">American Diabetes Association</a></strong></p>
+<p>The American Diabetes Association is the nation's leading 501(C)3 nonprofit charity providing diabetes research, information and advocacy.</p>
+<p>Tour de Cure is the premier cycling fundraising event of the American Diabetes Association and the nation&#8217;s largest diabetes cycling event. This event is a unique opportunity for businesses, clubs, friends and families to come together to form teams with the vision of a life free of diabetes and all its burdens</p>
+</div>
+<div id="footerRight">
+
+<div class="footerRightMenuLinks">
+<div ng-controller="siteNavMapController">
+
+<div ng-if="menu.primary" ng-cloak class="sitemapitem ng-cloak" ng-repeat="menu in sitenavs">
+<div class="footerSiteMap">{{menu.title}} <i class="fa fa-chevron-down"></i></div>
+<div class="footerSiteMapSub" ng-if="menu.menus">
+<div ng-repeat="submenu in menu.menus"><a ng-href="{{submenu.action}}">{{submenu.title}} &nbsp; &raquo;</a></div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<div class="clearDiv">&nbsp;</div>
+
+</div>
+<div class="clearDiv">&nbsp;</div>
+</div>
+</div>
+
+
+<!-- modal popups -->
+<div id="vwalkregpop" class="so-popout mfp-hide">
+    <div class="magpopbanner" style="padding:15px;background-color:#C41230;border-top-right-radius:7px;border-top-left-radius:7px;margin-bottom:12px;font-size:16pt;font-weight:bold;color:#FFF;">How to be a Virtual Walker?</div>
+    <div style="padding:12px;">
+        <!--<h3 id="vwregH" style="font-size:14pt;"><strong>How to be a Virtual Walker?</strong></h3>-->
+        <div id="vwregL">
+        <img src="../ws/so/so2016/img/vwalkernew.jpg" border="0" style="max-width:205px;width:100%;height:auto;">
+        </div>
+    	<div id="vwregR">
+    	<p style="font-size:11pt;">It's easy!</p>
+    	<ul>
+        <li style="font-size:11pt;">Click on the <strong>"Register"</strong> button located within the top of this page, </li>
+        <li style="font-size:11pt;">Find the Step Out you&#8217;d like to participate in locally, and </li>
+        <li style="font-size:11pt;">At the beginning of registering choose the VIRTUAL WALKER registration option.</li>
+        </ul>
+    	<p>That's it!</p>
+    	<!--<p><a id="vwregnow" href="../site/SPageServer/?pagename=OUT_SO_SEARCH" class="redBtnLeftNav"><span style="color:#FFF;">Register Now</span></a>
+    </p>-->
+    </div>
+	<div class="clearDiv">&nbsp;</div>
+</div>
+</div>
+
+<div id="createteamcompanypop" class="so-popout mfp-hide">
+    <div class="magpopbanner" style="padding:15px;background-color:#C41230;border-top-right-radius:7px;border-top-left-radius:7px;margin-bottom:12px;font-size:16pt;font-weight:bold;color:#FFF;">Create a Team
+</div>
+<div style="padding:12px;">
+<div id="vwregL">
+        <img src="../ws/so/so2016/img/vwalkernew.jpg" border="0" style="max-width:205px;width:100%;height:auto;">
+</div>
+<div id="vwregR">
+<!--<h3 id="vwregH" style="font-size:14pt;"><strong>How to be a Virtual Walker?</strong></h3>-->
+<p style="font-size:11pt;">You can create a team either through the <strong>"Register"</strong> button above where you'll first find the nearby event or by visiting the list of events associated with national company below.</p>
+<p>Do not forget to associate your newly created team with this company.</p>
+<!--<p><a id="vwregnow" href="../site/SPageServer/?pagename=OUT_SO_SEARCH" class="redBtnLeftNav"><span style="color:#FFF;">Register Now</span></a>
+</p>-->
+</div>
+<div class="clearDiv">&nbsp;</div>
+</div>
+</div>
+
+<div id="cvvpop" class="so-popout mfp-hide">
+<div class="magpopbanner" style="padding:15px;background-color:#C41230;border-top-right-radius:7px;border-top-left-radius:7px;margin-bottom:12px;font-size:16pt;font-weight:bold;color:#FFF;">
+<h2>Credit Card Verification Code</h2>
+</div>
+<div style="padding:12px;">
+<p>The Verification Code is imprinted on credit cards to help merchants verify transactions when the actual card is not present, such as Internet purchases or donations. The merchant uses this number as part of the authorization process with the card issuer.</p>
+<p>Please use the images below to locate the verification code for your card type.</p>
+<p><strong><u>Visa, Master Card, and Discover</u></strong></p>
+<img alt="Visa, Master Card, and Discover Verification Code " src="../ws/digitalmarketing/img/cvv1.jpg" border="0" align="left" />
+<p>The verification code for Visa, Master Card, and Discover is a 3-digit number printed on the back of your card. It appears after the account number or last 4-digits of your account number, in the signature panel.</p>
+<div style="clear:both;height:2px;">&nbsp;</div>
+<img alt="American Express Verification Code" src="../ws/digitalmarketing/img/cvv2.jpg" border="0" align="left" />
+<p><strong><u>American Express</u></strong></p>
+<p>The American Express verification code is a 4-digit number printed on the front of your card. It appears above and to the right of the embossed account number.</p>
+<div style="clear:both;height:1px;">&nbsp;</div>
+</div>
+</div>
+
+<div id="joinlocalcompanyteampop" class="so-popout mfp-hide">
+    <div class="magpopbanner" style="padding:15px;background-color:#C41230;border-top-right-radius:7px;border-top-left-radius:7px;margin-bottom:12px;font-size:16pt;font-weight:bold;color:#FFF;">Join a Team
+</div>
+<div style="padding:12px;">
+<p style="font-size:11pt;">To join a team within this company, view the list of the available teams within this page and click on the team name or the <strong>"join"</strong> button next to it.</p>
+<div class="clearDiv">&nbsp;</div>
+</div>
+</div>
+
+<!-- registration gateway v2.0-->
+
+<div id="gatewayReg" class="so-popout mfp-hide">
+<div style="background-color:#C41230;color:#FFF;font-weight:bold;font-size:20pt;border-top-right-radius:8px;border-top-left-radius:8px;padding:30px;margin-bottom:12px;">Register</div>
+<div id="evtDetailInfo" style="padding:10px"></div>
+<div class="clearDiv">&nbsp;</div>
+<!--<center>
+<div id="createTeamTR" class="eqheight">
+<center>
+<a id="createTeamTRImgBtn" href="TRR?fr_tm_opt=new&pg=tfind&fr_id="><img src="../ws/so/so2015/img/createTeam.jpg" border="0" /></a>
+</center>
+<p>Create a new team and become a team captain.</p>
+<p><a href="TRR?fr_tm_opt=new&pg=tfind&fr_id=" id="createTeamTRlink">Create a Team &raquo;</a></p>
+</div>
+<div id="joinTeamTR" class="eqheight">
+<center>
+<a id="joinTeamTRImgBtn" href="TRR?pg=tfind&fr_id="><img src="../ws/so/so2015/img/joinTeam.jpg" border="0" /></a>
+</center>
+<p>Find and join an existing team.</p>
+<p><a href="TRR?pg=tfind&fr_id=" id="joinTeamTRlink">Join a Team &raquo;</a></p>
+</div>
+<div id="regIndividual" class="eqheight">
+<center>
+<a id="regIndTRImgBtn" href="TRR?fr_tm_opt=none&pg=tfind&fr_id="><img src="../ws/so/so2015/img/regIndividual.jpg" border="0" /></a>
+</center>
+<p>Participate on your own without joining a team.</p>
+<p><a href="TRR?fr_tm_opt=none&pg=tfind&fr_id=" id="regIndTRlink">Register Individually &raquo;</a></p>
+</div>
+</center>
+<div class="clearDiv" style="height:10px;">&nbsp;</div>
+<div id="beVWalker">
+<div id="beVWalkerImg">
+<img src="../ws/so/so2015/img/vwalker_icon.jpg" />
+</div>
+<div id="beVWalkerTxt">
+<h4><strong><span class="redText">Be</span> a Virtual Walker</strong></h4>
+<p>Can't make it to your local event?</p>
+<p>No problem! Register as virtual walker and participate from any location.</p>
+<p><a id="regVirtualTRLink" href="TRR?fr_tm_opt=none&pg=tfind&fr_id=&vwalk=y">Go Virtual &raquo;</a></p>
+</div>
+<div class="clearDiv">&nbsp;</div>-->
+
+<div id="createTRTeam" class="blueborderwhite-btn-cta">
+<p class="CTAHighlighter"><strong>CREATE</strong> a new team</p>
+<p>Become a captain of a new team.</p>
+</div>
+
+<div id="joinTRTeam" class="blueborderwhite-btn-cta">
+<p class="CTAHighlighter"><strong>JOIN</strong> a team</p>
+<p>Join a team already registered for this event.</p>
+</div>
+
+<div id="registerTRInd" class="blueborderwhite-btn-cta">
+<p class="CTAHighlighter"><strong>REGISTER</strong> as an individual</p>
+<p>Participate without associating with a team.</p>
+</div>
+
+<!--<div id="registerTRVWalker" class="blueborderwhite-btn-cta">
+<p class="CTAHighlighter"><strong>BE</strong> a Virtual Walker</p>
+<p>Participate from any location as a Virtual Walker.</p>
+</div>-->
+
+<div class="clearDiv" style="height:50px;">&nbsp;</div>
+
+</div>
+<!--<div class="clearDiv" style="height:50px;">&nbsp;</div>-->
+</div>
+
+<div class="clearDiv" style="height:1px;">&nbsp;</div>
+<div id="routeData">test</div>
+<div class="clearDiv" style="height:1px;">&nbsp;</div>
+
+
+
+
+
+<div id="dhDEBUG" style="display:none;">
+S4 id is: <span id="s4val">23</span><br />
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest Bootstrap 3.3.6 compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.27/angular-sanitize.min.js"></script>
+<script src="../ws/js/jquery.magnific-popup.min.js"></script>
+<script src="../ws/owl24/owl.carousel.min.js"></script>
+<script src="../ws/js/jquery.cycle216.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.7.1/luminateExtend.min.js"></script>
+
+
+<!--[if lte IE 7]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.1/json3.min.js"></script>
+<![endif]-->
+
+
+<!-- ADA Main JS -->
+<script src="../ws/tr/tr2017/js/tc2017r5c.min.js"></script>
+
+<script type="text/javascript">
+JQTC(document).ready(function(){
+
+
+
+
+
+
+
+
+});
+
+function replaceThatSOImg(){
+if(JQTC('#cstm-img').length > 0){
+var currpersonalimgsrc = JQTC('#cstm-img').attr('src');
+if(currpersonalimgsrc.indexOf('ws/so/so2016/img/default-personal-img.jpg') != -1){
+JQTC('#cstm-img').attr('src','../images/friendraiser_uploads/1215734294.custom.jpg');	
+}
+}
+}
+
+
+function buildMyNatCompRank(whichCompID){
+	var jsonRankURL = "../ws/tr/tr2017/natcomp/json/"+whichCompID+".json";
+	
+		var buildTbl = '<br /><h4 style="font-size:11pt;"><strong>Team Ranking on Completed Events</strong></h4><table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading" style="padding:3px;width:20px" >&nbsp;</th><th class="lc_Heading" style="padding:3px;">Team Name</th><th class="lc_Heading" style="padding:3px;">Captain</th><th class="lc_Heading" style="padding:3px;">Fundraising Total</th><th class="lc_Heading" style="padding:3px;" >Event Name</th></tr>';
+	JQTC.getJSON(jsonRankURL, function(data){	
+		var counter=1;
+		var len;
+		var myFtotalSum=0;		
+		for (var i=0, len=data.length; i < len; i++) {
+			//console.log(data[i].TeamName);
+			var FtotalToNumber = Number(data[i].FT.replace(/[^0-9\.]+/g,""));			
+			myFtotalSum = myFtotalSum + FtotalToNumber;			
+			
+			buildTbl +='<tr class="lc_Row0"><td style="padding:0px;width:20px">'+counter+'</td><td style="padding:0px;">'+data[i].TeamName+'</td><td style="padding:0px;">'+data[i].Captain+'</td><td style="padding:0px;">'+data[i].FT+'</td><td style="padding:0px;">'+data[i].EvtName+'</td></tr>';	
+			counter++;	
+		}	
+		
+		buildTbl +='<tr class="lc_Row0"><td style="padding:0px;width:20px"><strong>Total:</strong></td><td>&nbsp;</td><td>&nbsp;</td><td style="padding:0px;"><strong>'+currencyFormat(myFtotalSum)+'</strong></td><td style="padding:0px;">&nbsp;</td></tr>';
+		
+//append that matching if applicable
+		
+
+
+buildTbl+='</table>';
+
+JQTC('#topnatcteamresult').html(buildTbl);
+		
+		//hide it for now
+		//JQTC('#topnatcteamresult').hide();
+	});
+}
+
+
+function currencyFormat (num) {
+    return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+}
+
+
+</script>
+
+<style>
+#topnatcteamresult{overflow:auto;}
+td{font-size:10pt;}
+</style>
+
+
+<script type="text/javascript">
+if(window.console){
+console.log(jQuery.fn.jquery);
+console.log($.fn.jquery);
+console.log(JQTC.fn.jquery);
+}
+</script>
+
+<script type="text/javascript"> 
+var $buoop = {c:2}; 
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.min.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+</body>
+
+</html>

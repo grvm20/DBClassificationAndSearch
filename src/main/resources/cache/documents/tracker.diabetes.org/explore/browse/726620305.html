@@ -1,0 +1,2060 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head profile="http://www.w3.org/2005/10/profile">
+	    <title>Browse Foods - MyFoodAdvisor&trade;</title>
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	    <meta name="google-site-verification" content="hrjqf-8rXSNynxTAx-DPtv0ljrcaVIi02Vee-U4nWhw" />
+        <script type="text/javascript" charset="utf-8" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.simplemodal.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.qtip.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/effects.core.js"></script>
+        <link rel="stylesheet" href="http://tracker.diabetes.org/myfoodadvisor/media/css/screen.css" />
+        <!--[if lte IE 6]>
+        <link rel="stylesheet" href="http://tracker.diabetes.org/myfoodadvisor/media/css/ie6.css" />
+        <![endif]-->
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+            $('a.modal,input.modal').click(function(event){
+                var selector = $(this).attr('href');
+                $(selector).modal({persist: true});
+                event.preventDefault();
+            });
+        });
+        
+        function enterSubmit(event, funct){
+            var characterCode = event.keyCode
+            if(characterCode == 13){
+                funct();
+            }
+        }
+
+            $(document).ready(function() {
+                $('.graphs .charts .chart_set .column').qtip({
+                    show: 'mouseover',
+                    hide: 'mouseout',
+                    style: {
+                        tip: {
+                            corner: 'leftMiddle',
+                            size: {
+                                x: 4,
+                                y:8
+                            }
+                        },
+                        border: {
+                            width: 1,
+                            radius: 2
+                        }
+                    },
+                    position: {
+                        corner: {
+                            target: 'rightMiddle',
+                            tooltip: 'leftMiddle'
+                        }
+                    }
+                });
+                
+                
+                $('.results_data tr td:not(.day, .link)').qtip({
+                    show: 'mouseover',
+                    hide: 'mouseout',
+                    style: {
+                        tip: 'leftMiddle',
+                        border: {
+                            width: 1,
+                            radius: 2
+                        }
+                    },
+                    position: {
+                        corner: {
+                            target: 'rightMiddle',
+                            tooltip: 'leftMiddle'
+                        }
+                    }
+                });
+
+              $('#content ul.bullet li').hover(function() {
+                    $('> a', this).stop().animate({backgroundPosition: '10px'}, {duration:200});
+                },function(){
+                    $('> a', this).stop().animate({backgroundPosition: '6px'}, {duration:200});
+                });
+
+                $('li.hover').hover(function() {
+                    $(this).stop().animate({backgroundColor: '#beedfb'}, {duration: 1});
+                    }, function(){
+                    if($(this).hasClass('selected')){
+                        return;
+                    }else if($(this).hasClass('even')){
+                        $(this).stop().animate({backgroundColor: '#eef5fa'}, {duration: 800});
+                    }else{   
+                        $(this).stop().animate({backgroundColor: '#ffffff'},{duration: 800});
+                    }
+                });
+
+                //Default Searchbox to mimic live site
+                var searchText = $('#id_text_input').val()
+                
+                $('#id_text_input').focus(function(){
+                        if($(this).val() == "Enter Food...")
+                        $(this).val("")
+                });
+                
+                $('.search-form').parent().submit(function() {
+                    if($('#id_text_input').val() == "Enter Food..."){
+                        $('#id_text_input').val("");
+                    }
+                });
+                
+                $(window).load(function(){
+                    if(searchText == "")
+                    $('#id_text_input').val("Enter Food...")
+                });
+                }
+            );
+            
+        </script>
+        
+	</head>
+	<body class="browse">
+	<div id="wrap">
+	    <div id="header">
+            <a href="/" class="mfa-logo"><img src='http://tracker.diabetes.org/myfoodadvisor/media/images/mfa-logo.png' alt='MyFoodAdvisor' /></a>
+	        <a href="http://www.diabetes.org/" target="_blank" class="ada-logo"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/ada-logo.png" alt="American Diabetes Association&reg;" title="American Diabetes Association&reg;" /></a>
+	        <ul class="utility-nav">
+	    
+        
+	    
+            <li><a href="#login-modal" class="modal">Login</a></li>
+        
+	    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="last"><a href="/es/explore/browse/fat/">en Español</a></li>
+                    
+                
+                
+            </ul>
+            
+            <ul class="main-nav">
+                <li class="selected"><a href="/explore/"><span class="left">&nbsp;</span><span class="right">Explore Foods</span></a></li>
+                <li class=""><a href="/recipe/"><span class="left">&nbsp;</span><span class="right">Recipes</span></a></li>
+                <li class=""><a href="#login-modal" class="modal"><span class="left">&nbsp;</span><span class="right">Create a Dish</span></a></li>
+                <li class=""><a href="/my_mfa/"><span class="left">&nbsp;</span><span class="right">Your Food Advisor</span></a></li>
+                <li class=""><a href="/help/"><span class="left">&nbsp;</span><span class="right">Help</span></a></li>
+	        </ul>
+	        <div class="clear"></div>
+	    </div>
+	    <div id="main">
+	    <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/content-head.gif" alt="" id="content-head" />
+	    <div id="content">
+        
+        
+            <div id="login-modal" class="modalWindow">
+                <div class="modalTop"> </div>
+                <div class="modalInner">
+                    <div class="registerArea">
+                        <h3>Register for Account</h3>
+                        <p>To access some areas of the site you need to register for an account.</p>
+                        <a href="https://donations.diabetes.org/site/ConsProfileUser?NEXTURL=http://mfa-qa.diabetes.org" class="button"><span>Register Now</span></a>
+                    </div>
+                    <h3>Or Login</h3>
+                    <div class="loginform" onkeydown="javascript:enterSubmit(event, function(){document.login_form.submit()})">
+                        <form action="/login/" method="post" name="login_form" id="login_form">
+                            <label for="id_username">Username</label>
+                            <input type="text" name="username" id="id_username" />
+                            <label for="id_password">Password</label>
+                            <input type="password" name="password" id="id_password" />
+                            <input type="hidden" name="next" value="explore/" />
+                        </form>
+                        <div class="login-options">
+                            <a href="http://main.diabetes.org/site/UserLogin">Forgot Password?</a>
+                        </div>
+                        <div class="login-button-group">
+                            <a href="#" class="button" onclick="document.login_form.submit()"><span>Login</span></a>
+                            <a href="#" class="button simplemodal-close"><span>Cancel</span></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modalBottom"> </div>
+            </div>
+        
+        
+        
+<div class="head"><h2>Browse for Food</h2><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/compare-main.png" width="196" height="80" alt="Chili Peppers" class="chili" /></div>
+    <div class="clear"></div>
+    
+    <div id="innerwrap">
+        <div class="browse-top">&nbsp;</div>
+        <div class="browse-inner">
+            <div class="categories">
+                <h3>Browse Categories</h3>
+                <ul class="bullet">
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/starch-grains/">Starch &amp; Grains</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/fruit/">Fruit</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/milk-yogurt/">Milk &amp; Yogurt</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/desserts/">Desserts</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/non-starchy-vegetable/">Non Starchy Vegetable</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/soup/">Soup</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/other-beverages/">Other Beverages</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/beef-veal/">Beef &amp; Veal</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/pork-lamb/">Pork &amp; Lamb</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/poultry-fish/">Poultry &amp; Fish</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/other-meats/">Other Meats</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/plant-based-protein/">Plant-Based Protein</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd selected">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/fat/">Fat</a>
+                            
+                        
+                        <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/double-arrows.gif" alt="Arrows" />
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/free-foods/">Free Foods</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/others/">Others</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="even">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/mixed-dishes/">Mixed Dishes</a>
+                            
+                        
+                        
+                    </li>
+                    
+                    <li class="odd">
+                        
+
+                        
+                            
+                            <a href="/explore/browse/restaurant-foods/">Restaurant Foods</a>
+                            
+                        
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="results box-blue-half">
+                <div class="header">
+                    <h3>Fat</h3>
+                    <span>Showing 1-100 of 158</span>
+                </div>
+                
+                <div class="pagination">
+                    <span class="previous-page">
+                    
+                    <span class="not-a-link"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/lt-gray.gif" alt="Left Arrow" /> Previous</span>
+                    
+                    </span>
+                    <span class="next-page">
+                    
+                    <a href="?page=2">Next <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/gt-blue.gif" alt="Right Arrow"/></a>
+                    
+                    </span>
+                    <div class="all-pages">
+                        <ul>
+                        
+                        <li class="selected">
+                            
+                                <a href="?page=1">1</a>
+                            
+                        </li>
+                        
+                        <li>
+                            
+                                <a href="?page=2">2</a>
+                            
+                        </li>
+                        
+                    </ul>
+                    </div>
+                </div>
+                
+                <div class="resultslist">
+                <ul>
+                
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1668/">Almond milk, unsweetened, chocolate (Blue Diamond)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1669/">Almond milk, unsweetened, original</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1584/">Almonds, dry roasted</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1585/">Almonds, raw</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1610/">Avocado</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1611/">Bacon bits, real bacon</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1612/">Bacon grease</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1613/">Bacon, cooked (skillet), lower sodium (Oscar Mayer)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1614/">Bacon, turkey, 50-70% less fat </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1615/">Beef tallow</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1586/">Brazil nuts</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1674/">Butter</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1730/">Butter blend with oil, light (Land O&#39;Lakes)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1729/">Butter blend with oil, regular (Land O&#39;Lakes)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1676/">Butter, light</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1675/">Butter, no salt added</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1677/">Butter, whipped</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1732/">Buttery Spread, no trans fat, dairy free (Earth Balance)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1587/">Cashews, salted</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1588/">Cashews, unsalted</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1678/">Cheese, mascarpone</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1665/">Chimichurri Sauce</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1617/">Chitterlings, boiled</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1654/">Coconut cream, canned, sweetened</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1648/">Coconut meat (heart), fresh</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1667/">Coconut Milk Beverage, sugar free (SoDelicious)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1618/">Coconut milk, canned </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1622/">Coconut milk, canned, unsweetened, lite (light)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1655/">Coconut milk, fresh</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1619/">Coconut, shredded, dried, sweetened</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1650/">Cracklings, pork (gratons), cooked</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1679/">Cream cheese</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1680/">Cream cheese spread, tub, reduced fat (Philadelphia)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1672/">Cream cheese spread, whipped (Philadelphia)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1681/">Cream cheese, 1/3 less fat (neufchatel) (Philadelphia)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1575/">Cream, half and half</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1578/">Cream, heavy (whipping, unwhipped)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1576/">Cream, light</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1577/">Cream, light whipping, liquid</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1582/">Creme fraiche</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1620/">Fatback, cooked</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1651/">Fatback, raw</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1589/">Flaxseed, ground</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1653/">Ghee (clarified butter)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1591/">Hazelnuts (filberts)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1607/">Hemp seed, hulled </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1652/">Hog (pork) jowl, raw</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1644/">Hooligan (eulachon) grease</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1646/">Horseradish sauce (Kraft)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1720/">I Can&#39;t Believe It&#39;s Not Butter, light</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1621/">Lard, pork</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1608/">Macadamia nuts, dry roasted, no salt added</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1722/">Margarine, liquid, regular (Shedd)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1731/">Margarine, regular, stick, 65-80% vegetable oils</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1724/">Margarine, regular, tub </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1673/">Margarine, stick, 65% vegetable oil (Blue Bonnet, Parkay)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1687/">Margarine, stick, corn oil type (Fleischmann&#39;s)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1688/">Margarine, tub, 60-70% vegetable oil, no trans fat</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1719/">Margarine-like spread, (I Can&#39;t Believe It&#39;s Not Butter)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1689/">Margarine-like spread, 35% fat and yogurt (Brummel &amp; Brown)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1690/">Margarine-like spread, 60% fat, tub, (Olivio)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1691/">Margarine-like spread, tub, light, 30-50% vegetable oil </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1692/">Mayonnaise</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1686/">Mayonnaise, canola cholesterol free reduced fat (Hellmann&#39;s)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1693/">Mayonnaise, light</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1683/">Mayonnaise, light (Hellmann, Best Foods)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1694/">Mayonnaise-style salad dressing (Miracle Whip)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1695/">Mayonnaise-style salad dressing, light (reduced fat) </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1583/">Mexican crema</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1592/">Nuts, mixed, no salt</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1623/">Oil, almond</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1664/">Oil, annatto</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1645/">Oil, bearded seal, (oogruk) </a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1616/">Oil, brown rice</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1624/">Oil, canola</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1625/">Oil, chili</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1661/">Oil, coconut</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1626/">Oil, corn</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1659/">Oil, cottonseed</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1658/">Oil, flaxseed</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1627/">Oil, grapeseed</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1628/">Oil, hazelnut</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1629/">Oil, olive</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1662/">Oil, palm</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1663/">Oil, palm kernel</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1630/">Oil, peanut</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1631/">Oil, safflower</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1632/">Oil, sesame seed</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1633/">Oil, soybean</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1660/">Oil, sunflower</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1634/">Oil, walnut</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1635/">Olive tapenade</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1666/">Olives and capers mix (alcaparrado) (Goya)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1636/">Olives, green</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1639/">Olives, ripe (black), canned, chopped</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1638/">Olives, ripe (black), pitted</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1640/">Olives, ripe, Kalamata, pitted</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1637/">Olives, stuffed green</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="odd hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1697/">Peanut butter, reduced-fat (Peter Pan)</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                    <li class="even hover">
+                        <div class="food">
+                            
+                                
+                                    <a href="/explore/1593/">Peanuts, dry roasted, no salt</a>
+                                
+                            
+                        </div>
+                        <div class="icons">
+                            
+                            <span class='sprite fat'>&nbsp;</span>
+                        </div>
+                        
+
+                    </li>
+                    
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div class="clear"></div>
+
+        </div>
+        </div>
+        <div id="footer">
+            <p>Copyright 2009 American Diabetes Association</p>
+            <ul>
+                <li class="first"><a href="/">MyFoodAdvisor Home</a></li>
+                <li><a href="http://www.diabetes.org/">ADA Home</a></li>
+            </ul>
+        
+        </div>
+    </div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2200333-50']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+    </body>
+</html>
