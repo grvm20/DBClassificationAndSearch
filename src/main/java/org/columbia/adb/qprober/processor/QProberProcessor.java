@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.columbia.adb.qprober.classifier.DBClassTreeBuilder;
+import org.columbia.adb.qprober.classifier.DBCategoryTreeBuilder;
 import org.columbia.adb.qprober.classifier.DBClassifier;
 import org.columbia.adb.qprober.classifier.model.Category;
 import org.columbia.adb.qprober.contentsummary.QProberSummaryGenerator;
@@ -24,7 +24,7 @@ public class QProberProcessor {
 	private String accessKey;
 
 	@Autowired
-	private DBClassTreeBuilder dbClassTreeBuilder;
+	private DBCategoryTreeBuilder dbCategoryTreeBuilder;
 
 	@Autowired
 	private ApplicationContext ctx;
@@ -41,7 +41,7 @@ public class QProberProcessor {
 
 	public void startProcessing() throws Exception {
 
-		Category root = dbClassTreeBuilder.buildTree();
+		Category root = dbCategoryTreeBuilder.buildTree();
 		DBClassifier dbClassifier = (DBClassifier) ctx.getBean("DBClassifier",
 				root, specificityThreshhold, coverageThreshhold, dbName,
 				accessKey);

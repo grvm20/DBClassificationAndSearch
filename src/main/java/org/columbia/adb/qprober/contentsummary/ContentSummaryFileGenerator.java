@@ -34,7 +34,7 @@ public class ContentSummaryFileGenerator {
 				new FileOutputStream(fileName), "utf-8"))) {
 
 			for (String s : keys) {
-				String new1 = s + "#" + map.get(s).toString() + "#\n";
+				String new1 = s + "#" + (float)map.get(s) + "#\n";
 				writer.write(new1);
 			}
 

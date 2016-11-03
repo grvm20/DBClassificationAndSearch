@@ -59,11 +59,13 @@ public class QProberSummaryGenerator {
 			int c=0;
 			int totalcount=0;
 			
+			for(Map.Entry<String, List<String>> entry : category.getQueries().entrySet()){
+				totalcount += entry.getValue().size();
+			}
+			
 			for (Map.Entry<String, List<String>> entry : category.getQueries()
 					.entrySet()) {
-				for (String query1 : entry.getValue()) {
-					totalcount++;
-				}
+				
 				for (String query : entry.getValue()) {
 					c++;
 					System.out.println(c+"/"+totalcount);

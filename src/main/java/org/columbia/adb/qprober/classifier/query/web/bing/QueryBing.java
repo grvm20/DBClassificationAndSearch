@@ -47,8 +47,6 @@ public class QueryBing implements QueryWeb {
 		String urlString = "https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Composite?Query=%27site%3a"
 				+ dbName + "%20%" + query + "%27&$top=10&$format=JSON";
 
-		System.out.println("URL: " + urlString);
-
 		URL url = new URL(urlString);
 
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
