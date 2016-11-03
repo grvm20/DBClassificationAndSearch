@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.columbia.adb.qprober.classifier.model.DBClass;
+import org.columbia.adb.qprober.classifier.model.Category;
 import org.columbia.adb.qprober.classifier.query.QueryFetcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,58 +15,58 @@ public class DBClassTreeBuilder {
 	@Autowired
 	private QueryFetcher queryFetcher;
 
-	public DBClass buildTree() throws Exception {
+	public Category buildTree() throws Exception {
 
 		// Initializing Computer's Children
-		Map<String, DBClass> computersChildren = new HashMap<>();
-		DBClass hardware = new DBClass("Hardware", null, null);
-		DBClass programming = new DBClass("Programming", null, null);
+		Map<String, Category> computersChildren = new HashMap<>();
+		Category hardware = new Category("Hardware", null, null);
+		Category programming = new Category("Programming", null, null);
 		computersChildren.put("Hardware", hardware);
 		computersChildren.put("Programming", programming);
 
 		// Initializing Computers
 		String computerString = "Computers";
-		DBClass computers = new DBClass(computerString, computersChildren,
+		Category computers = new Category(computerString, computersChildren,
 				fetchQuery(computerString));
 		hardware.setParent(computers);
 		programming.setParent(computers);
 
 		// Initializing Health's Children
-		Map<String, DBClass> healthChildren = new HashMap<>();
-		DBClass fitness = new DBClass("Fitness", null, null);
-		DBClass disease = new DBClass("Diseases", null, null);
+		Map<String, Category> healthChildren = new HashMap<>();
+		Category fitness = new Category("Fitness", null, null);
+		Category disease = new Category("Diseases", null, null);
 		healthChildren.put("Fitness", fitness);
 		healthChildren.put("Diseases", disease);
 
 		// Initializing Health
 		String healthString = "Health";
-		DBClass health = new DBClass(healthString, healthChildren,
+		Category health = new Category(healthString, healthChildren,
 				fetchQuery(healthString));
 		fitness.setParent(health);
 		disease.setParent(health);
 
 		// Initializing sports children
-		Map<String, DBClass> sportsChildren = new HashMap<>();
-		DBClass basketball = new DBClass("Basketball", null, null);
-		DBClass soccer = new DBClass("Soccer", null, null);
+		Map<String, Category> sportsChildren = new HashMap<>();
+		Category basketball = new Category("Basketball", null, null);
+		Category soccer = new Category("Soccer", null, null);
 		sportsChildren.put("Basketball", basketball);
 		sportsChildren.put("Soccer", soccer);
 
 		// Initializing sports
 		String sportsString = "Sports";
-		DBClass sports = new DBClass(sportsString, sportsChildren,
+		Category sports = new Category(sportsString, sportsChildren,
 				fetchQuery(sportsString));
 		basketball.setParent(sports);
 		soccer.setParent(sports);
 
-		Map<String, DBClass> rootChildren = new HashMap<>();
+		Map<String, Category> rootChildren = new HashMap<>();
 		rootChildren.put("Computers", computers);
 		rootChildren.put("Health", health);
 		rootChildren.put("Sports", sports);
 
 		// Initializing Root
 		String rootString = "Root";
-		DBClass root = new DBClass(rootString, rootChildren,
+		Category root = new Category(rootString, rootChildren,
 				fetchQuery(rootString));
 		computers.setParent(root);
 		health.setParent(root);

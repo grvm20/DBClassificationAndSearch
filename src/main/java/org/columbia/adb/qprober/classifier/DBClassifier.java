@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.columbia.adb.qprober.cache.QueryCache;
-import org.columbia.adb.qprober.classifier.model.DBClass;
-import org.columbia.adb.qprober.classifier.query.QueryWeb;
-import org.columbia.adb.qprober.classifier.query.bing.QueryBing;
+import org.columbia.adb.qprober.classifier.model.Category;
+import org.columbia.adb.qprober.classifier.query.web.QueryWeb;
+import org.columbia.adb.qprober.classifier.query.web.bing.QueryBing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -20,101 +20,107 @@ public class DBClassifier {
 	private static final String CACHE_FILE_DIRECTORY = "src/main/resources/cache/matches/";
 
 	private QueryWeb queryWeb;
+
 	@Autowired
 	private QueryCache queryCache;
 
 	@Autowired
 	private ApplicationContext ctx;
-	
-	private DBClass root;
+
+	private Category root;
 	private Double expectedSpecificity;
 	private Long expectedThreshhold;
-	private String host;
+	private String dbName;
 	private String accessKey;
 
-	public DBClassifier(DBClass root, Double expectedSpecificity,
-			Long expectedThreshhold, String host, String accessKey) {
+	public DBClassifier(Category root, Double expectedSpecificity,
+			Long expectedThreshhold, String dbName, String accessKey) {
 		this.root = root;
 		this.expectedSpecificity = expectedSpecificity;
 		this.expectedThreshhold = expectedThreshhold;
-		this.host = host;
+		this.dbName = dbName;
 		this.accessKey = accessKey;
 	}
 
-	public List<DBClass> classify() throws Exception {
+	public List<Category> classify() throws Exception {
 
-		queryWeb = (QueryBing)ctx.getBean("QueryBing", accessKey, host, CACHE_FILE_DIRECTORY);
-		
-		List<DBClass> dbClasses = new ArrayList<>();
-		classify(root, expectedSpecificity, expectedThreshhold, dbClasses);
+		queryWeb = (QueryBing) ctx.getBean("QueryBing", accessKey, dbName);
 
-		return dbClasses;
+		System.out.println("Classifying...");
+		List<Category> categories = new ArrayList<>();
+		classify(root, expectedSpecificity, expectedThreshhold, categories);
+
+		return categories;
 	}
 
-	private void classify(DBClass dbClass, Double specificity, Long coverage,
-			List<DBClass> classes) throws Exception {
+	private void classify(Category category, Double specificity, Long coverage,
+			List<Category> categories) throws Exception {
 
-		if (dbClass.getChildren() == null) {
-			classes.add(dbClass);
+		if (category.getChildren() == null) {
+			categories.add(category);
 		} else {
-			List<DBClass> validChildren = queryDBClass(dbClass, specificity,
-					coverage, dbClass.getName());
+			List<Category> validChildren = getValidChildrenCategories(category, specificity,
+					coverage, category.getName());
 			if (validChildren.size() == 0) {
 
-				classes.add(dbClass);
+				categories.add(category);
 			} else {
 
-				for (DBClass child : validChildren) {
+				for (Category child : validChildren) {
 
-					classify(child, specificity, coverage, classes);
+					classify(child, specificity, coverage, categories);
 				}
 			}
 		}
 	}
 
-	private List<DBClass> queryDBClass(DBClass dbClass,
-			Double expectedSpecificity, Long expectedCoverage, String name)
+	private List<Category> getValidChildrenCategories(Category category,
+			Double expectedSpecificity, Long expectedCoverage, String categoryName)
 			throws Exception {
 
 		long total = 0L;
 
-		for (Map.Entry<String, List<String>> entry : dbClass.getQueries()
+		for (Map.Entry<String, List<String>> entry : category.getQueries()
 				.entrySet()) {
 
-			long classCoverage = 0L;
+			long categoryCoverage = 0L;
 
 			for (String q : entry.getValue()) {
 
 				Long matches;
-				if (queryCache.isCached(CACHE_FILE_DIRECTORY + host, q.trim())) {
-					matches = queryCache.queryWeb(CACHE_FILE_DIRECTORY + host,
-							q.trim());
+				if (queryCache.isCached(CACHE_FILE_DIRECTORY + dbName, q.trim())) {
+					matches = queryCache.getMatchCount(CACHE_FILE_DIRECTORY
+							+ dbName, q.trim());
 				} else {
-					matches = queryWeb.getMatchCount(q);
+					matches = queryWeb.getMatchCount(q, CACHE_FILE_DIRECTORY);
 				}
 
-				classCoverage += matches;
+				categoryCoverage += matches;
 				total += matches;
 			}
-			dbClass.getChildren().get(entry.getKey())
-					.setCoverage(classCoverage);
+			category.getChildren().get(entry.getKey())
+					.setCoverage(categoryCoverage);
 		}
 
-		List<DBClass> list = new ArrayList<>();
-		for (Map.Entry<String, DBClass> entry : dbClass.getChildren()
+		List<Category> list = new ArrayList<>();
+		for (Map.Entry<String, Category> entry : category.getChildren()
 				.entrySet()) {
 
-			DBClass child = entry.getValue();
+			Category child = entry.getValue();
 			Long coverage = child.getCoverage();
-
-			if (coverage > expectedCoverage) {
-				Double specificity = (double) (child.getParent()
-						.getSpecificity() * coverage) / total;
-				if (specificity > expectedSpecificity) {
-					child.setSpecificity(specificity);
-					list.add(child);
-				}
+			
+			
+			Double specificity = (double) (child.getParent()
+					.getSpecificity() * coverage) / total;
+			
+			System.out.println("Specificity for category: " + child.getName() + " is " + specificity);
+			System.out.println("Coverage for category: " + child.getName() + " is " + coverage);
+			
+			if (coverage > expectedCoverage && specificity > expectedSpecificity) {
+				child.setSpecificity(specificity);
+				list.add(child);
 			}
+			
 		}
 
 		return list;

@@ -8,17 +8,17 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DBClass {
+public class Category {
 
-	private Map<String, DBClass> children;
+	private Map<String, Category> children;
 	private String name;
 	private Map<String, List<String>> queries;
 	private Long coverage;
 	private Double specificity;
-	private DBClass parent;
+	private Category parent;
 	
 
-	public DBClass (String name, Map<String, DBClass> children, Map<String, List<String>> queries){
+	public Category (String name, Map<String, Category> children, Map<String, List<String>> queries){
 		this.name = name;
 		this.children = children;
 		this.queries = queries;

@@ -16,11 +16,11 @@ public class QProberRunner {
 		String bingAccessKey = args[0];
 		Double specificityThreshold = Double.parseDouble(args[1]);
 		Long coverageThreshhold = Long.parseLong(args[2]);
-		String host = args[3];
+		String db = args[3];
 
 		QProberProcessor qProberProcessor = (QProberProcessor) ctx.getBean(
 				"QProberProcessor", specificityThreshold, coverageThreshhold,
-				host, bingAccessKey);
+				db, bingAccessKey);
 		qProberProcessor.startProcessing();
 
 	}

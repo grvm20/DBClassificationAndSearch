@@ -1,18 +1,26 @@
-package org.columbia.adb.qprober.classifier.query.bing;
+package org.columbia.adb.qprober.classifier.query.web.bing;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.xml.bind.DatatypeConverter;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.Validate;
-import org.columbia.adb.qprober.classifier.query.QueryWeb;
+import org.columbia.adb.qprober.classifier.query.web.QueryWeb;
 import org.json.JSONObject;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -22,24 +30,22 @@ import org.springframework.stereotype.Component;
 public class QueryBing implements QueryWeb {
 
 	private String key;
-	private String site;
-	private String cachePath;
+	private String dbName;
 
-	public QueryBing(final String key, final String site, final String cachePath) {
+	public QueryBing(final String key, final String site) {
 		Validate.notEmpty(key, "Key passed is Empty");
 		this.key = key;
-		this.site = site;
-		this.cachePath = cachePath;
+		this.dbName = site;
 	}
 
 	@Override
-	public Long getMatchCount(String queryString) throws Exception {
+	public Long getMatchCount(final String queryString, final String cachePath) throws Exception {
 
 		String accountKeyAuth = Base64.encodeBase64String((key + ":" + key)
 				.getBytes());
 		final String query = URLEncoder.encode(queryString, "utf8");
 		String urlString = "https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Composite?Query=%27site%3a"
-				+ site + "%20%" + query + "%27&$top=10&$format=JSON";
+				+ dbName + "%20%" + query + "%27&$top=10&$format=JSON";
 
 		System.out.println("URL: " + urlString);
 
@@ -70,16 +76,16 @@ public class QueryBing implements QueryWeb {
 			JSONObject webResult = d.getJSONArray("results").getJSONObject(0);
 
 			Long webTotal = Long.parseLong(webResult.getString("WebTotal"));
-			addToCache(queryString, webTotal);
+			addToCache(queryString, webTotal, cachePath);
 			return webTotal;
 		}
 
 	}
 
-	private void addToCache(String queryString, Long webTotal)
+	private void addToCache(final String queryString, final Long webTotal, final String cachePath)
 			throws IOException {
 
-		String filePath = cachePath + "/" + site + "/";
+		String filePath = cachePath + "/" + dbName + "/";
 		final File parent = new File(filePath);
 		parent.mkdirs();
 		try (BufferedWriter wr = new BufferedWriter(new FileWriter(new File(
@@ -87,6 +93,43 @@ public class QueryBing implements QueryWeb {
 			wr.write(webTotal.toString());
 		}
 
+	}
+
+	@Override
+	public String getContent(final String urlString) throws IOException {
+		
+		String accountKeyEnc = DatatypeConverter
+				.printBase64Binary((key + ":" + key).getBytes());
+
+		URL url = new URL(urlString);
+		URLConnection urlConnection = url.openConnection();
+		urlConnection.setRequestProperty("Authorization", "Basic "
+				+ accountKeyEnc);
+
+		InputStream inputStream = (InputStream) urlConnection.getContent();
+		byte[] contentRaw = new byte[urlConnection.getContentLength()];
+		inputStream.read(contentRaw);
+		String content = new String(contentRaw);
+
+		// The content string is the xml/json output from Bing.
+		return content;
+	}
+
+	@Override
+	public List<String> getTopURL(final String query, final int topK) {
+		List<String> result = new ArrayList<String>();
+		String bingQuery = "https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Web?Query=%27site%3a"
+							+ dbName + "%20" + query.replace(" ", "+") + "%27&$top=" + topK + "&$format=Atom";
+		try {
+			String content = getContent(bingQuery);
+			Pattern p = Pattern.compile("<d:Url m:type=\"Edm.String\">(.+?)</d:Url>");
+			Matcher m = p.matcher(content);
+			while (m.find())
+				result.add(m.group(1));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 }

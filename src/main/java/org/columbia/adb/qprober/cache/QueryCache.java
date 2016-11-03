@@ -15,7 +15,7 @@ public class QueryCache {
 		return file.exists();
 	}
 	
-	public Long queryWeb(String filePath, String query) throws Exception{
+	public Long getMatchCount(String filePath, String query) throws Exception{
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(filePath + "/" + query))) {
             return Long.parseLong(br.readLine());
