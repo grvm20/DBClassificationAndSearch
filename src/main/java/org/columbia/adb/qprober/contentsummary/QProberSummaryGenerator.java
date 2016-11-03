@@ -44,7 +44,7 @@ public class QProberSummaryGenerator {
 
 	public void generateContentSummary(Category category) {
 
-		System.out.println("Extracting topic content summaries");
+		//System.out.println("Extracting topic content summaries");
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		while (category != null) {
 
@@ -56,17 +56,24 @@ public class QProberSummaryGenerator {
 				continue;
 			}
 			List<String> duplicates = new ArrayList<String>();
-
+			int c=0;
+			int totalcount=0;
+			
 			for (Map.Entry<String, List<String>> entry : category.getQueries()
 					.entrySet()) {
-
+				for (String query1 : entry.getValue()) {
+					totalcount++;
+				}
 				for (String query : entry.getValue()) {
-
+					c++;
+					System.out.println(c+"/"+totalcount);
 					List<String> top4Urls = queryWeb.getTopURL(query, 4);
 					for (String url : top4Urls) {
 						if (!duplicates.contains(url)) {
 							duplicates.add(url);
 							// check encoding of url here
+							System.out.println("Getting Page"+url);
+							System.out.println("");
 							List<String> setOfWords = lynxRunner.runLynx(url);
 							List<String> newdocSet = new ArrayList<>();
 							if (!setOfWords.isEmpty()) {
@@ -84,10 +91,10 @@ public class QProberSummaryGenerator {
 							}
 
 						}
-						System.out.println("Completed Test: db:" + dbName
+						/*System.out.println("Completed Test: db:" + dbName
 								+ " category:" + categoryName + " query:"
-								+ query);
-						System.out.println("URLs: " + top4Urls);
+								+ query);*/
+						//System.out.println("URLs: " + top4Urls);
 
 					}
 
