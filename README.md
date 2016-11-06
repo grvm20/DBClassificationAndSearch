@@ -52,4 +52,4 @@ Additional Details:
 
 ### Class Diagram
 
-![alt tag]("https://cloud.githubusercontent.com/assets/5005160/20040762/3f10ef22-a42b-11e6-8c7d-8d54d058bb66.jpg")
+![alt tag](https://cloud.githubusercontent.com/assets/5005160/20040762/3f10ef22-a42b-11e6-8c7d-8d54d058bb66.jpg "Class Diagram")
