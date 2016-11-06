@@ -52,20 +52,4 @@ Additional Details:
 
 ### Class Diagram
 
-![alt tag](https://cloud.githubusercontent.com/assets/5005160/19406498/07e9a828-9255-11e6-95c1-b51b57b7ce2a.jpg "Class Diagram")
-
-Listing functionalities of each class
-
-* QueryExpansionRunner – Responsible for initializing all dependencies. Also triggers QueryInteractor
-* QueryInteractor – Queries Web and fetches top 10 result for the query. Takes user feedback about the results that have been returned and then passes this information to QueryExpander
-* QueryWeb – Queries Web to figure out top 10 results of a query
-* QueryExpander – Receives user feedback from QueryInteractor and uses this information to
-expand query
-* StopWordsCache – Maintains a cache of all stopwords. Is used by query expander to filter out
-stop words.
-
-### QueryResultInfo Data Model
-* String URL
-* String Title
-* String Summary
-* Boolean isRelevant
+![alt tag](https://cloud.githubusercontent.com/assets/5005160/20040762/3f10ef22-a42b-11e6-8c7d-8d54d058bb66.jpg")
